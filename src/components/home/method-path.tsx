@@ -8,7 +8,8 @@ export function MethodPath() {
   return (
     <Section
       id="votre-chemin"
-      className="bg-cream-100"
+      className="relative overflow-hidden bg-pattern-soft"
+      containerClassName="relative"
       eyebrow="Votre chemin"
       title="Sortir du flou, étape après étape"
       description="L'arc ouvert du logo inspire cette trajectoire : de la découverte à l'action, vers plus de clarté."
@@ -34,7 +35,7 @@ export function MethodPath() {
                   {step.number}
                 </span>
                 <div>
-                  <h3 className="text-lg font-bold tracking-tight text-ink-700">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-ink-700">
                     {step.title}
                   </h3>
                   <p className="mt-1 text-base leading-relaxed text-ink-500">

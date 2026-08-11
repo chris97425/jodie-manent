@@ -46,6 +46,7 @@
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
 
   --shadow-sm: 0 4px 12px rgba(59, 42, 36, 0.04);
   --shadow-md: 0 8px 24px rgba(59, 42, 36, 0.06);
@@ -58,6 +59,9 @@
   --z-header: 40;
   --z-overlay: 50;
   --z-toast: 60;
+
+  /* Motif discret — basePath GitHub Pages */
+  --pattern-image: url("/jodie-manent/images/pattern.png");
 }
 
 @theme inline {
@@ -89,13 +93,15 @@
   --color-ink-800: var(--ink-800);
   --color-ink-900: var(--ink-900);
 
-  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-script: var(--font-parisienne), cursive;
 
   --radius-sm: var(--radius-sm);
   --radius-md: var(--radius-md);
   --radius-lg: var(--radius-lg);
   --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
 
   --shadow-sm: var(--shadow-sm);
   --shadow-md: var(--shadow-md);
@@ -131,8 +137,31 @@
     text-rendering: optimizeLegibility;
   }
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
   ::selection {
     background: color-mix(in srgb, var(--coral-500) 22%, white);
     color: var(--ink-800);
+  }
+}
+
+@layer utilities {
+  .bg-pattern-soft {
+    background-color: var(--cream-100);
+    background-image:
+      linear-gradient(
+        color-mix(in srgb, var(--cream-100) 90%, transparent),
+        color-mix(in srgb, var(--cream-100) 90%, transparent)
+      ),
+      var(--pattern-image);
+    background-repeat: no-repeat, repeat;
+    background-size: auto, 300px 300px;
   }
 }
