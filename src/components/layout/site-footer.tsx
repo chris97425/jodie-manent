@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { BrandLogo } from "@/components/ui/brand-logo";
 import { Container } from "@/components/ui/container";
 import {
   FacebookIcon,
@@ -21,65 +21,60 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-coral-100 bg-ink-900 text-warm-100">
+    <footer className="bg-footer text-cream-100">
       <Container className="py-12 sm:py-16">
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <Image
-                src="/logo_jodie.png"
+              <BrandLogo
+                size={40}
                 alt=""
-                width={40}
-                height={40}
-                className="h-10 w-10 rounded-lg"
+                className="h-10 w-10 rounded-md"
               />
-              <p className="font-display text-3xl text-white">{SITE_NAME}</p>
+              <div>
+                <p className="font-script text-3xl leading-none text-coral-400">
+                  Jodie
+                </p>
+                <p className="text-sm font-semibold tracking-wide text-cream-100">
+                  Manent
+                </p>
+              </div>
             </div>
-            <p className="mt-4 max-w-sm text-base leading-relaxed text-warm-200">
+            <p className="mt-4 max-w-sm text-base leading-relaxed text-cream-200">
               {SITE_TAGLINE}
             </p>
-            <p className="mt-3 text-sm text-warm-300">
+            <p className="mt-3 text-sm text-cream-200/80">
               Coach professionnelle certifiée (RNCP) · Sainte-Marie, La Réunion
             </p>
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-coral-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-coral-300">
               Navigation
             </p>
-            <ul className="mt-4 space-y-2">
-              <li>
-                <Link
-                  href="/a-propos/"
-                  className="inline-flex min-h-11 items-center text-warm-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 active:text-coral-200"
-                >
-                  À propos
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/offres/"
-                  className="inline-flex min-h-11 items-center text-warm-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 active:text-coral-200"
-                >
-                  Offres
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact/"
-                  className="inline-flex min-h-11 items-center text-warm-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 active:text-coral-200"
-                >
-                  Contact
-                </Link>
-              </li>
+            <ul className="mt-4 space-y-1">
+              {[
+                { href: "/a-propos/", label: "À propos" },
+                { href: "/offres/", label: "Offres" },
+                { href: "/contact/", label: "Contact" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="inline-flex min-h-11 items-center text-cream-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 active:text-coral-200"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-coral-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-coral-300">
               Réseaux
             </p>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-1">
               {SOCIAL_LINKS.map((link) => {
                 const Icon = iconMap[link.id as keyof typeof iconMap];
                 return (
@@ -88,11 +83,11 @@ export function SiteFooter() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-11 items-center gap-2 text-warm-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 active:text-coral-200"
+                      className="inline-flex min-h-11 items-center gap-2 text-cream-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 active:text-coral-200"
                       aria-label={link.label}
                     >
                       <Icon className="h-4 w-4" />
-                      <span>{link.label}</span>
+                      <span className="text-sm sm:text-base">{link.label}</span>
                     </a>
                   </li>
                 );
@@ -101,7 +96,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-warm-300 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-cream-200/75 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {SITE_NAME}. Tous droits réservés.
           </p>

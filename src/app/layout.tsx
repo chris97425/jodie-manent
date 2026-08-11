@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Great_Vibes, Manrope } from "next/font/google";
+import { Manrope, Parisienne } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import {
@@ -16,8 +16,9 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const greatVibes = Great_Vibes({
-  variable: "--font-great-vibes",
+/** Accent script rare — proche du logo « Jodie M. », moins fleurie que Great Vibes */
+const parisienne = Parisienne({
+  variable: "--font-parisienne",
   weight: "400",
   subsets: ["latin"],
   display: "swap",
@@ -57,10 +58,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  icons: {
-    icon: "/logo_jodie.png",
-    apple: "/logo_jodie.png",
-  },
 };
 
 export default function RootLayout({
@@ -69,11 +66,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${manrope.variable} ${greatVibes.variable}`}>
+    <html lang="fr" className={`${manrope.variable} ${parisienne.variable}`}>
       <body className="flex min-h-dvh flex-col font-sans antialiased">
         <a
           href="#contenu-principal"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-ink-900 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-coral-600"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-ink-700 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-coral-600"
         >
           Aller au contenu
         </a>

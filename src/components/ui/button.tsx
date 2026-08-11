@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "cream";
 type ButtonSize = "md" | "lg";
 
 type SharedProps = {
@@ -24,15 +24,17 @@ type ButtonAsLink = SharedProps & {
 export type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const baseClasses =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-6 text-center text-base font-medium transition-[transform,background-color,color,box-shadow,opacity] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 focus-visible:ring-offset-2 focus-visible:ring-offset-warm-50 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100";
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-6 text-center text-base font-semibold tracking-tight transition-[transform,background-color,color,box-shadow,border-color,opacity] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100";
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-coral-500 text-white shadow-sm hover:bg-coral-600 hover:shadow-md",
+    "bg-coral-500 text-white shadow-sm hover:bg-coral-800 hover:shadow-md active:bg-coral-900",
   secondary:
-    "border border-coral-500/40 bg-white text-coral-700 hover:border-coral-500 hover:bg-coral-50",
+    "border border-ink-700/15 bg-cream-50 text-ink-700 hover:border-coral-500 hover:bg-white hover:text-coral-800",
+  cream:
+    "bg-cream-100 text-ink-800 hover:bg-cream-50 active:bg-cream-200",
   ghost:
-    "bg-transparent text-ink-800 hover:bg-coral-50 hover:text-coral-700",
+    "bg-transparent text-ink-700 hover:bg-cream-100 hover:text-ink-800",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {

@@ -14,7 +14,7 @@ export default function OffersPage() {
       <PageHero
         eyebrow="Offres"
         title="Accompagnements sur devis"
-        description="Quatre formats pour révéler vos talents — présentiel ou distanciel, à La Réunion et en métropole."
+        description="Bilan, formation et coaching — présentiel ou distanciel, à La Réunion et en métropole. Mentorat POWAO en mention."
       />
       <OffersGrid />
     </>

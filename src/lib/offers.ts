@@ -5,70 +5,68 @@ export type Offer = {
   description: string;
   modalities: string;
   pricing: string;
+  featured?: boolean;
 };
 
+/** Trois offres principales (cartes) — ordre demandé */
 export const OFFERS: Offer[] = [
   {
-    id: "coaching",
-    title: "Coaching professionnel",
-    summary:
-      "Un accompagnement sur mesure pour clarifier vos transitions et avancer avec confiance.",
-    description:
-      "Des séances de coaching professionnel pour vous aider à clarifier votre situation, structurer vos choix et traverser vos transitions professionnelles avec plus de sens et de sérénité.",
-    modalities:
-      "Présentiel ou distanciel — à La Réunion et en métropole.",
-    pricing: "Sur devis",
-  },
-  {
     id: "bilans",
-    title: "Bilans de compétences",
+    title: "Bilan de compétences",
     summary:
-      "Construire un projet professionnel à votre image, grâce aux Intelligences et Natures Multiples.",
+      "Approche des Intelligences et Natures Multiples pour construire un projet professionnel à votre image.",
     description:
       "Basés sur l'approche des Intelligences et Natures Multiples, mes bilans de compétences vous aident à construire un projet professionnel à votre image.",
     modalities:
       "Présentiel ou distanciel — à La Réunion et en métropole.",
     pricing: "Sur devis",
+    featured: true,
   },
   {
     id: "formations",
-    title: "Formations",
+    title: "Formation",
     summary:
-      "Des formations chaleureuses autour des intelligences multiples, des talents et des transitions.",
+      "Intelligences multiples, talents et transitions — des formats pour mieux se connaître et avancer.",
     description:
-      "Des formations sur des thèmes liés aux intelligences multiples, aux talents et aux transitions professionnelles — pour mieux se connaître et mobiliser ses forces.",
+      "Des formations sur des thèmes liés aux intelligences multiples, aux talents et aux transitions professionnelles.",
     modalities:
       "Présentiel ou distanciel — à La Réunion et en métropole.",
     pricing: "Sur devis",
   },
   {
-    id: "mentorat",
-    title: "Mentorat",
+    id: "coaching",
+    title: "Coaching professionnel",
     summary:
-      "Accompagnement de jeunes au sein du collectif POWAO, en distanciel et à La Réunion.",
+      "Accompagnement des transitions professionnelles, séance après séance.",
     description:
-      "Un mentorat au sein du collectif POWAO pour accompagner les jeunes dans leur parcours — en distanciel et à La Réunion.",
+      "Un coaching professionnel pour clarifier et structurer vos transitions professionnelles, avec un cadre bienveillant et exigeant.",
     modalities:
-      "Distanciel et interventions à La Réunion.",
+      "Présentiel ou distanciel — à La Réunion et en métropole.",
     pricing: "Sur devis",
   },
 ];
 
+/** Mention discrète — pas une 4ᵉ carte principale */
+export const MENTORAT_NOTE = {
+  id: "mentorat",
+  title: "Mentorat collectif POWAO",
+  text: "Accompagnement de jeunes — distanciel et à La Réunion. Sur devis.",
+} as const;
+
 export const SOCIAL_PROOF = [
   {
     id: "hackathon",
-    title: "Hackathon IA de La Réunion #IAVANCE",
-    description: "Coach au 1er Hackathon IA de La Réunion.",
+    title: "#IAVANCE",
+    description: "Coach au 1er Hackathon IA de La Réunion",
   },
   {
     id: "fanm",
     title: "Fanm Nou Lé Kapab",
-    description:
-      "Atelier « Fanm Nou Lé Kapab » — Mission Locale Nord Réunion.",
+    description: "Atelier — Mission Locale Nord Réunion",
   },
 ] as const;
 
 export const TESTIMONIAL = {
   quote: "un pas vers plus de clarté, de confiance, de sens",
-  attribution: "Cliente accompagnée",
+  attribution: "Cliente — bilan de compétences",
 } as const;
