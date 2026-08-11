@@ -9,23 +9,40 @@ export function SocialProof() {
       className="bg-white"
       eyebrow="Témoignage"
       title="Ce qui a été dit"
-      description="Une citation réelle — sans inventer d'autres retours."
+      description="Une citation réelle — et des emplacements prêts pour de futurs retours, sans invention."
       align="center"
     >
-      <RevealOnScroll>
-        <figure className="mx-auto max-w-3xl rounded-2xl border border-cream-200 bg-cream-50 px-6 py-10 sm:px-12">
-          <Quote
-            aria-hidden="true"
-            className="mx-auto mb-4 h-7 w-7 text-coral-500"
-          />
-          <blockquote className="text-center text-2xl font-semibold leading-snug tracking-tight text-ink-700 sm:text-3xl">
-            « {TESTIMONIAL.quote} »
-          </blockquote>
-          <figcaption className="mt-6 text-center text-xs font-semibold uppercase tracking-[0.16em] text-ink-400">
-            {TESTIMONIAL.attribution}
-          </figcaption>
-        </figure>
-      </RevealOnScroll>
+      <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <RevealOnScroll>
+          <figure className="flex h-full flex-col justify-center rounded-2xl bg-coral-500 px-6 py-10 text-white sm:px-10">
+            <Quote
+              aria-hidden="true"
+              className="mb-4 h-7 w-7 text-white/70"
+            />
+            <blockquote className="text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">
+              « {TESTIMONIAL.quote} »
+            </blockquote>
+            <figcaption className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-white/80">
+              {TESTIMONIAL.attribution}
+            </figcaption>
+          </figure>
+        </RevealOnScroll>
+
+        <div className="grid gap-4">
+          {[1, 2].map((slot) => (
+            <RevealOnScroll key={slot} delay={slot * 0.08}>
+              <div className="flex min-h-[8.5rem] flex-col justify-between rounded-2xl border border-dashed border-cream-300 bg-cream-50 px-5 py-5 text-left">
+                <p className="text-base font-semibold text-ink-400">
+                  Témoignage à venir
+                </p>
+                <p className="text-sm text-ink-500">
+                  Emplacement réservé — sans citation inventée.
+                </p>
+              </div>
+            </RevealOnScroll>
+          ))}
+        </div>
+      </div>
     </Section>
   );
 }

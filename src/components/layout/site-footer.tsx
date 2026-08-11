@@ -12,7 +12,6 @@ import { SITE_NAME, SITE_TAGLINE, SOCIAL_LINKS } from "@/lib/site";
 
 const iconMap = {
   linkedin: LinkedInIcon,
-  "linkedin-company": LinkedInIcon,
   facebook: FacebookIcon,
   instagram: InstagramIcon,
   malt: MaltIcon,
@@ -97,7 +96,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-cream-200/75 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-cream-100 sm:flex-row sm:items-center sm:justify-between sm:text-base">
           <p>
             © {year} {SITE_NAME}. Tous droits réservés.
           </p>

@@ -8,7 +8,6 @@ import { SOCIAL_LINKS } from "@/lib/site";
 
 const iconMap = {
   linkedin: LinkedInIcon,
-  "linkedin-company": LinkedInIcon,
   facebook: FacebookIcon,
   instagram: InstagramIcon,
   malt: MaltIcon,

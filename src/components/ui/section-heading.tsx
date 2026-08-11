@@ -1,0 +1,41 @@
+import { cx } from "@/lib/cx";
+
+type SectionHeadingProps = {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  align?: "left" | "center";
+  className?: string;
+};
+
+export function SectionHeading({
+  eyebrow,
+  title,
+  description,
+  align = "left",
+  className,
+}: SectionHeadingProps) {
+  return (
+    <header
+      className={cx(
+        "mb-10 max-w-2xl sm:mb-12",
+        align === "center" && "mx-auto text-center",
+        className,
+      )}
+    >
+      {eyebrow ? (
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-coral-800">
+          {eyebrow}
+        </p>
+      ) : null}
+      <h2 className="text-3xl font-bold tracking-tight text-ink-700 sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
+        {title}
+      </h2>
+      {description ? (
+        <p className="mt-4 text-lg leading-relaxed text-ink-500">
+          {description}
+        </p>
+      ) : null}
+    </header>
+  );
+}
