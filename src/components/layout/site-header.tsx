@@ -43,10 +43,13 @@ export function SiteHeader() {
           <nav aria-label="Navigation principale" className="hidden lg:block">
             <ul className="flex items-center gap-1">
               {NAV_ITEMS.map((item) => {
+                const normalizedPath = pathname.endsWith("/")
+                  ? pathname
+                  : `${pathname}/`;
                 const active =
                   item.href === "/"
-                    ? pathname === "/" || pathname === ""
-                    : pathname.startsWith(item.href.replace(/\/$/, ""));
+                    ? normalizedPath === "/"
+                    : normalizedPath.startsWith(item.href);
                 return (
                   <li key={item.href}>
                     <Link

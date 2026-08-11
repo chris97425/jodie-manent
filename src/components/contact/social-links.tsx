@@ -1,12 +1,17 @@
-import { ExternalLink, Facebook, Instagram, Linkedin } from "lucide-react";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  MaltIcon,
+} from "@/components/ui/social-icons";
 import { SOCIAL_LINKS } from "@/lib/site";
 
 const iconMap = {
-  linkedin: Linkedin,
-  "linkedin-company": Linkedin,
-  facebook: Facebook,
-  instagram: Instagram,
-  malt: ExternalLink,
+  linkedin: LinkedInIcon,
+  "linkedin-company": LinkedInIcon,
+  facebook: FacebookIcon,
+  instagram: InstagramIcon,
+  malt: MaltIcon,
 } as const;
 
 export function SocialLinks() {
@@ -18,7 +23,7 @@ export function SocialLinks() {
       </p>
       <ul className="mt-5 space-y-2">
         {SOCIAL_LINKS.map((link) => {
-          const Icon = iconMap[link.id as keyof typeof iconMap] ?? ExternalLink;
+          const Icon = iconMap[link.id as keyof typeof iconMap];
           return (
             <li key={link.id}>
               <a
@@ -28,7 +33,7 @@ export function SocialLinks() {
                 className="flex min-h-11 items-center gap-3 rounded-xl px-3 text-ink-800 transition-colors hover:bg-coral-50 hover:text-coral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:bg-coral-100"
                 aria-label={link.label}
               >
-                <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
+                <Icon className="h-4 w-4 shrink-0" />
                 <span>{link.label}</span>
               </a>
             </li>

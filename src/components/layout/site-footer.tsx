@@ -1,15 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin, ExternalLink } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  MaltIcon,
+} from "@/components/ui/social-icons";
 import { SITE_NAME, SITE_TAGLINE, SOCIAL_LINKS } from "@/lib/site";
 
 const iconMap = {
-  linkedin: Linkedin,
-  "linkedin-company": Linkedin,
-  facebook: Facebook,
-  instagram: Instagram,
-  malt: ExternalLink,
+  linkedin: LinkedInIcon,
+  "linkedin-company": LinkedInIcon,
+  facebook: FacebookIcon,
+  instagram: InstagramIcon,
+  malt: MaltIcon,
 } as const;
 
 export function SiteFooter() {
@@ -76,7 +81,7 @@ export function SiteFooter() {
             </p>
             <ul className="mt-4 space-y-2">
               {SOCIAL_LINKS.map((link) => {
-                const Icon = iconMap[link.id as keyof typeof iconMap] ?? ExternalLink;
+                const Icon = iconMap[link.id as keyof typeof iconMap];
                 return (
                   <li key={link.id}>
                     <a
@@ -86,7 +91,7 @@ export function SiteFooter() {
                       className="inline-flex min-h-11 items-center gap-2 text-warm-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 active:text-coral-200"
                       aria-label={link.label}
                     >
-                      <Icon aria-hidden="true" className="h-4 w-4" />
+                      <Icon className="h-4 w-4" />
                       <span>{link.label}</span>
                     </a>
                   </li>
