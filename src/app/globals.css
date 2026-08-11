@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --coral-50: #fff5f4;
+  --coral-100: #ffe4e2;
+  --coral-200: #ffc9c6;
+  --coral-300: #ffa39e;
+  --coral-400: #ff7f7a;
+  --coral-500: #ff6b6b;
+  --coral-600: #e85a5a;
+  --coral-700: #c94747;
+  --coral-800: #a33a3a;
+  --warm-50: #fffaf8;
+  --warm-100: #f7f1ee;
+  --warm-200: #ebe3de;
+  --warm-300: #d4cac3;
+  --ink-400: #8a827c;
+  --ink-500: #6f6761;
+  --ink-600: #564f4a;
+  --ink-700: #3f3a36;
+  --ink-800: #2f2a27;
+  --ink-900: #221e1c;
+  --background: var(--warm-50);
+  --foreground: var(--ink-900);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-coral-50: var(--coral-50);
+  --color-coral-100: var(--coral-100);
+  --color-coral-200: var(--coral-200);
+  --color-coral-300: var(--coral-300);
+  --color-coral-400: var(--coral-400);
+  --color-coral-500: var(--coral-500);
+  --color-coral-600: var(--coral-600);
+  --color-coral-700: var(--coral-700);
+  --color-coral-800: var(--coral-800);
+  --color-warm-50: var(--warm-50);
+  --color-warm-100: var(--warm-100);
+  --color-warm-200: var(--warm-200);
+  --color-warm-300: var(--warm-300);
+  --color-ink-400: var(--ink-400);
+  --color-ink-500: var(--ink-500);
+  --color-ink-600: var(--ink-600);
+  --color-ink-700: var(--ink-700);
+  --color-ink-800: var(--ink-800);
+  --color-ink-900: var(--ink-900);
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-great-vibes), cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--coral-500) 28%, white);
+    color: var(--ink-900);
+  }
+}
