@@ -4,9 +4,10 @@ Site vitrine démonstrateur pour **Jodie Manent**, coach professionnelle certifi
 
 ## Stack
 
-- Next.js (dernière version stable, App Router) — export statique pour GitHub Pages
-- TypeScript · Tailwind CSS · GSAP (ScrollTrigger)
-- Design system maison (tokens, grille 8 px, composant-first)
+- Next.js 16 (App Router) — export statique pour GitHub Pages
+- TypeScript · Tailwind CSS v4 · GSAP (ScrollTrigger)
+- Lucide · Google Fonts (Great Vibes + Manrope)
+- Design system maison (tokens corail, grille 8 px, composant-first)
 
 ## Développement
 
@@ -15,17 +16,30 @@ npm install
 npm run dev
 ```
 
+Ouvrir [http://localhost:3000/jodie-manent/](http://localhost:3000/jodie-manent/) (`basePath` actif).
+
+```bash
+npm run build   # génère le dossier `out/`
+npm run lint
+```
+
 ## Déploiement (GitHub Pages)
 
-Le site est exporté en statique (`output: 'export'`, `basePath: '/jodie-manent'`) et publié via GitHub Actions sur la branche `gh-pages` → https://chris97425.github.io/jodie-manent/
+- `next.config.ts` : `output: 'export'`, `basePath: '/jodie-manent'`, `assetPrefix: '/jodie-manent/'`, `images.unoptimized`, `trailingSlash`
+- Workflow : `.github/workflows/deploy.yml` (build sur `main` → `upload-pages-artifact` → `deploy-pages`)
+- URL : https://chris97425.github.io/jodie-manent/
 
-## Préparation Supabase (non branché pour l'instant)
+Activer GitHub Pages sur le dépôt : Source = **GitHub Actions**.
 
-Le projet est prêt à recevoir un formulaire de contact Supabase sans modification structurelle :
+## Pages
 
-1. Créer un projet Supabase dédié (une instance par projet).
-2. Copier `.env.example` vers `.env.local` et renseigner les clés.
-3. Schéma futur (commenté, à activer le moment venu) :
+Accueil · À propos · Offres · Témoignages · Contact · Mentions légales · Politique de confidentialité
+
+## Préparation Supabase (non branché)
+
+1. Créer un projet Supabase dédié.
+2. Copier `.env.example` vers `.env.local`.
+3. Schéma futur (commenté) :
 
 ```sql
 -- create table contact_messages (
@@ -37,4 +51,4 @@ Le projet est prêt à recevoir un formulaire de contact Supabase sans modificat
 -- );
 ```
 
-Les clients `lib/supabase/client.ts` (navigateur) et `lib/supabase/server.ts` (serveur) lisent `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` et retombent gracieusement en mode démo si absentes.
+Les clients `src/lib/supabase/client.ts` et `server.ts` retombent en mode démo si les clés sont absentes. Le build Pages n'utilise aucune variable d'environnement.

@@ -1,0 +1,76 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect } from "react";
+import { X } from "lucide-react";
+import { NAV_ITEMS } from "@/lib/site";
+import { Button } from "@/components/ui/button";
+
+type MobileNavProps = {
+  open: boolean;
+  onClose: () => void;
+};
+
+export function MobileNav({ open, onClose }: MobileNavProps) {
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [open, onClose]);
+
+  if (!open) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 lg:hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Menu de navigation"
+    >
+      <button
+        type="button"
+        className="absolute inset-0 bg-ink-900/40 transition-opacity"
+        aria-label="Fermer le menu"
+        onClick={onClose}
+      />
+      <nav className="absolute inset-y-0 right-0 flex w-[min(100%,20rem)] flex-col bg-warm-50 shadow-xl">
+        <div className="flex items-center justify-between border-b border-coral-100 px-4 py-4">
+          <p className="font-display text-2xl text-coral-600">Menu</p>
+          <button
+            type="button"
+            onClick={onClose}
+            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-xl text-ink-800 transition-colors hover:bg-coral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:scale-95"
+            aria-label="Fermer le menu"
+          >
+            <X aria-hidden="true" className="h-5 w-5" />
+          </button>
+        </div>
+        <ul className="flex flex-1 flex-col gap-1 px-3 py-4">
+          {NAV_ITEMS.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                onClick={onClose}
+                className="flex min-h-11 items-center rounded-xl px-3 text-base font-medium text-ink-800 transition-colors hover:bg-coral-50 hover:text-coral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:bg-coral-100"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div className="border-t border-coral-100 p-4" onClick={onClose}>
+          <Button href="/contact/" className="w-full">
+            Me contacter
+          </Button>
+        </div>
+      </nav>
+    </div>
+  );
+}
