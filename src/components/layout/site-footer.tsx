@@ -7,6 +7,7 @@ import {
   LinkedInIcon,
   MaltIcon,
 } from "@/components/ui/social-icons";
+import { LEGAL_NAV_LINKS } from "@/lib/legal/site-legal-info";
 import { SITE_NAME, SITE_TAGLINE, SOCIAL_LINKS } from "@/lib/site";
 
 const iconMap = {
@@ -100,19 +101,16 @@ export function SiteFooter() {
           <p>
             © {year} {SITE_NAME}. Tous droits réservés.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              href="/mentions-legales/"
-              className="inline-flex min-h-11 items-center transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400"
-            >
-              Mentions légales
-            </Link>
-            <Link
-              href="/politique-de-confidentialite/"
-              className="inline-flex min-h-11 items-center transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400"
-            >
-              Politique de confidentialité
-            </Link>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            {LEGAL_NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="inline-flex min-h-11 items-center transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </Container>

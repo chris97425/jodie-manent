@@ -31,6 +31,16 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://chris97425.github.io/jodie-manent/cgv/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://chris97425.github.io/jodie-manent/cgu/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://chris97425.github.io/jodie-manent/politique-de-confidentialite/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
