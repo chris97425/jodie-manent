@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { BrandLogo } from "@/components/ui/brand-logo";
 import { Container } from "@/components/ui/container";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
+import { withBasePath } from "@/lib/assets";
 import { SITE_DESCRIPTION, SITE_HERO } from "@/lib/site";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -165,7 +166,7 @@ export function HeroSection() {
             className="relative overflow-hidden rounded-2xl border border-cream-200 bg-cream-100 shadow-lg"
           >
             <Image
-              src="/images/hero.png"
+              src={withBasePath("/images/hero.png")}
               alt="Composition abstraite d'arcs concentriques corail et crème"
               width={1536}
               height={1024}

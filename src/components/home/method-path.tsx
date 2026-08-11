@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
 import { Section } from "@/components/ui/section";
+import { withBasePath } from "@/lib/assets";
 import { METHOD_STEPS } from "@/lib/content/method";
 
 export function MethodPath() {
@@ -16,7 +17,7 @@ export function MethodPath() {
         <RevealOnScroll>
           <div className="overflow-hidden rounded-2xl border border-cream-200 bg-white shadow-md">
             <Image
-              src="/images/formation.png"
+              src={withBasePath("/images/formation.png")}
               alt="Visuel abstrait — spirale ascendante évoquant la progression"
               width={960}
               height={720}

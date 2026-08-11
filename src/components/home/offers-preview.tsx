@@ -5,19 +5,20 @@ import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
 import { Card } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
+import { withBasePath } from "@/lib/assets";
 import { MENTORAT_NOTE, OFFERS } from "@/lib/offers";
 
 const OFFER_IMAGES: Record<string, { src: string; alt: string }> = {
   bilans: {
-    src: "/images/bilan.png",
+    src: withBasePath("/images/bilan.png"),
     alt: "Visuel abstrait — boussole pour le bilan de compétences",
   },
   coaching: {
-    src: "/images/coaching.png",
+    src: withBasePath("/images/coaching.png"),
     alt: "Visuel abstrait — formes en dialogue pour le coaching",
   },
   formations: {
-    src: "/images/formation.png",
+    src: withBasePath("/images/formation.png"),
     alt: "Visuel abstrait — spirale ascendante pour la formation",
   },
 };
