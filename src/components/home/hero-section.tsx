@@ -1,14 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import { BrandLogo } from "@/components/ui/brand-logo";
 import { Container } from "@/components/ui/container";
+import { PortraitCard } from "@/components/ui/portrait-card";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
-import { withBasePath } from "@/lib/assets";
 import { SITE_DESCRIPTION, SITE_HERO } from "@/lib/site";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,7 +17,7 @@ function HeroHeadline() {
   return (
     <h1
       data-hero="headline"
-      className="mt-6 max-w-xl text-3xl font-bold tracking-tight text-ink-700 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]"
+      className="mt-6 max-w-xl font-display text-3xl font-semibold tracking-tight text-ink-700 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]"
     >
       {parts[0]}
       <span className="text-coral-500">VOUS</span>
@@ -127,11 +126,11 @@ export function HeroSection() {
               className="h-14 w-14 rounded-xl shadow-sm sm:h-16 sm:w-16"
             />
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-500">
-                Coach professionnelle certifiée RNCP
+              <p className="font-script text-4xl leading-none text-coral-500">
+                Jodie
               </p>
-              <p className="mt-1 text-sm text-ink-500">
-                Spécialiste INM · Réunion & métropole
+              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink-500">
+                Coach professionnelle certifiée RNCP
               </p>
             </div>
           </div>
@@ -142,7 +141,7 @@ export function HeroSection() {
             data-hero="support"
             className="mt-5 max-w-lg text-lg leading-relaxed text-ink-500"
           >
-            {SITE_DESCRIPTION}
+            {SITE_DESCRIPTION} Interventions à La Réunion et en métropole.
           </p>
 
           <div data-hero="cta" className="mt-8 flex flex-wrap gap-3">
@@ -155,27 +154,27 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div data-hero="visual" className="relative lg:justify-self-end">
+        <div data-hero="visual" className="relative mx-auto w-full max-w-md lg:max-w-none lg:justify-self-end">
           <div
             data-parallax="back"
             aria-hidden="true"
-            className="absolute -inset-4 rounded-[2rem] border border-coral-500/25 sm:-inset-6"
+            className="absolute -inset-3 rounded-[2rem] border border-coral-500/30 sm:-inset-5"
           />
-          <div
-            data-parallax="front"
-            className="relative overflow-hidden rounded-2xl border border-cream-200 bg-cream-100 shadow-lg"
-          >
-            <Image
-              src={withBasePath("/images/hero.png")}
-              alt="Composition abstraite d'arcs concentriques corail et crème"
-              width={1536}
-              height={1024}
+          <div data-parallax="front" className="relative">
+            <PortraitCard
+              src="/images/jodie-hero.jpg"
+              alt="Jodie Manent, coach professionnelle à La Réunion, souriante en chemise blanche"
+              width={1169}
+              height={1280}
               priority
-              className="h-auto w-full object-cover"
+              className="aspect-[5/6]"
+              imageClassName="object-[center_20%]"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink-800/55 to-transparent px-5 py-5">
-              <p className="font-script text-4xl text-cream-50">Jodie</p>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cream-100/90">
+            <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/40 bg-ink-800/55 px-4 py-3 backdrop-blur-sm sm:bottom-5 sm:left-5 sm:right-auto sm:max-w-[14rem]">
+              <p className="font-script text-3xl leading-none text-cream-50">
+                Jodie
+              </p>
+              <p className="mt-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-cream-100/90">
                 Sortir du flou · Vers la clarté
               </p>
             </div>

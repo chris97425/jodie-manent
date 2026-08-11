@@ -6,7 +6,8 @@ import { FAQ_ITEMS } from "@/lib/content/faq";
 export function FaqSection() {
   return (
     <Section
-      className="bg-cream-100"
+      className="relative overflow-hidden bg-pattern-soft"
+      containerClassName="relative"
       eyebrow="FAQ"
       title="Questions fréquentes"
       description="Des réponses prudentes et honnêtes — les détails manquants restent à compléter."

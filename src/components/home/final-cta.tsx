@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -7,6 +8,7 @@ import {
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { withBasePath } from "@/lib/assets";
 import { SOCIAL_LINKS } from "@/lib/site";
 
 const iconMap = {
@@ -18,19 +20,30 @@ const iconMap = {
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden py-14 sm:py-16 lg:py-20">
-      <div aria-hidden="true" className="absolute inset-0 bg-coral-800" />
+    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
+      <Image
+        src={withBasePath("/images/cta.png")}
+        alt=""
+        fill
+        className="object-cover object-center"
+        sizes="100vw"
+      />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-br from-coral-500 via-coral-800 to-ink-800"
+        className="absolute inset-0 bg-ink-900/55"
       />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-r from-ink-900/70 via-ink-900/40 to-transparent"
+      />
+
       <Container className="relative">
         <RevealOnScroll>
-          <div className="mx-auto max-w-2xl text-center text-white">
-            <p className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <div className="mx-auto max-w-2xl text-center text-cream-50">
+            <p className="font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
               Prêt·e à sortir du flou ?
             </p>
-            <p className="mt-4 text-lg text-white/90">
+            <p className="mt-4 text-lg text-cream-100/95">
               Parlons de votre transition et de vos talents — sans engagement,
               sur devis.
             </p>
@@ -42,7 +55,7 @@ export function FinalCta() {
                 href="/offres/"
                 variant="ghost"
                 size="lg"
-                className="border border-white/30 text-white hover:bg-white/10 hover:text-white"
+                className="border border-cream-100/40 text-cream-50 hover:bg-white/10 hover:text-white"
               >
                 Voir les offres
               </Button>
@@ -58,7 +71,7 @@ export function FinalCta() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={link.label}
-                      className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-white/90 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-100 active:bg-white/15"
+                      className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-cream-100 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-100 active:bg-white/15"
                     >
                       <Icon className="h-4 w-4" />
                     </a>

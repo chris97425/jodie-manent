@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Parisienne } from "next/font/google";
+import { Fraunces, Inter, Parisienne } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import {
@@ -10,13 +10,22 @@ import {
 } from "@/lib/site";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+/** Titres — serif éditoriale nette (remplace Manrope trop arrondie) */
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+});
+
+/** Corps — sans-serif neutre et lisible */
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
 
-/** Accent script rare — proche du logo « Jodie M. », moins fleurie que Great Vibes */
+/** Accent script rare — logo / wordmark uniquement */
 const parisienne = Parisienne({
   variable: "--font-parisienne",
   weight: "400",
@@ -41,18 +50,18 @@ export const metadata: Metadata = {
     description: SITE_HEADLINE,
     images: [
       {
-        url: "/logo_jodie.png",
-        width: 512,
-        height: 512,
-        alt: "Logo Jodie M.",
+        url: "/images/jodie-hero.jpg",
+        width: 1169,
+        height: 1280,
+        alt: "Jodie Manent, coach professionnelle certifiée",
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: `${SITE_NAME} — Coach professionnelle`,
     description: SITE_HEADLINE,
-    images: ["/logo_jodie.png"],
+    images: ["/images/jodie-hero.jpg"],
   },
   robots: {
     index: true,
@@ -66,7 +75,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${manrope.variable} ${parisienne.variable}`}>
+    <html
+      lang="fr"
+      className={`${fraunces.variable} ${inter.variable} ${parisienne.variable}`}
+    >
       <body className="flex min-h-dvh flex-col font-sans antialiased">
         <a
           href="#contenu-principal"
