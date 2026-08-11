@@ -1,21 +1,34 @@
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  MaltIcon,
+} from "@/components/ui/social-icons";
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { SITE_TAGLINE } from "@/lib/site";
+import { SOCIAL_LINKS } from "@/lib/site";
+
+const iconMap = {
+  linkedin: LinkedInIcon,
+  facebook: FacebookIcon,
+  instagram: InstagramIcon,
+  malt: MaltIcon,
+} as const;
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
-      <div aria-hidden="true" className="absolute inset-0 bg-coral-500" />
+    <section className="relative overflow-hidden py-14 sm:py-16 lg:py-20">
+      <div aria-hidden="true" className="absolute inset-0 bg-coral-800" />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(176,58,46,0.25)_0%,_transparent_55%)]"
+        className="absolute inset-0 bg-gradient-to-br from-coral-500 via-coral-800 to-ink-800"
       />
       <Container className="relative">
         <RevealOnScroll>
           <div className="mx-auto max-w-2xl text-center text-white">
-            <p className="text-2xl font-bold tracking-tight sm:text-3xl">
-              {SITE_TAGLINE}
+            <p className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Prêt·e à sortir du flou ?
             </p>
             <p className="mt-4 text-lg text-white/90">
               Parlons de votre transition et de vos talents — sans engagement,
@@ -26,14 +39,33 @@ export function FinalCta() {
                 Je prends RDV
               </Button>
               <Button
-                href="/a-propos/"
+                href="/offres/"
                 variant="ghost"
                 size="lg"
-                className="text-white hover:bg-white/10 hover:text-white"
+                className="border border-white/30 text-white hover:bg-white/10 hover:text-white"
               >
-                Qui suis-je ?
+                Voir les offres
               </Button>
             </div>
+            <ul className="mt-8 flex flex-wrap items-center justify-center gap-2">
+              {SOCIAL_LINKS.map((link) => {
+                const Icon = iconMap[link.id as keyof typeof iconMap];
+                if (!Icon) return null;
+                return (
+                  <li key={link.id}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={link.label}
+                      className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-white/90 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-100 active:bg-white/15"
+                    >
+                      <Icon className="h-4 w-4" />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </RevealOnScroll>
       </Container>

@@ -38,14 +38,8 @@ export type SocialLink = {
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: "linkedin",
-    label: "LinkedIn — profil",
+    label: "LinkedIn",
     href: "https://re.linkedin.com/in/jodie-manent-8b727717",
-    external: true,
-  },
-  {
-    id: "linkedin-company",
-    label: "LinkedIn — Jodie Manent",
-    href: "https://www.linkedin.com/company/jodie-manent",
     external: true,
   },
   {
