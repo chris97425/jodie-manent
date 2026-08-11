@@ -1,13 +1,13 @@
 export function AbstractPortrait() {
   return (
     <div
-      className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-coral-500 shadow-sm"
+      className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-cream-200 bg-cream-100 shadow-[0_12px_32px_rgba(59,42,36,0.06)]"
       role="img"
-      aria-label="Visuel abstrait représentant l'univers de marque de Jodie Manent — formes organiques corail, sans portrait."
+      aria-label="Visuel abstrait géométrique — arcs et cercles corail, sans portrait."
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,_rgba(255,255,255,0.35),_transparent_40%),radial-gradient(circle_at_70%_70%,_rgba(255,255,255,0.18),_transparent_45%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_30%_28%,_rgba(255,107,107,0.16),_transparent_42%),radial-gradient(circle_at_72%_68%,_rgba(176,58,46,0.1),_transparent_48%)]"
       />
       <svg
         aria-hidden="true"
@@ -15,26 +15,42 @@ export function AbstractPortrait() {
         viewBox="0 0 400 500"
         fill="none"
       >
-        <path
-          d="M70 250C70 140 160 60 260 80C340 96 370 180 340 260C310 340 220 390 140 360C90 340 70 300 70 250Z"
-          stroke="rgba(255,255,255,0.85)"
-          strokeWidth="2"
+        <circle
+          cx="200"
+          cy="220"
+          r="140"
+          stroke="#FF6B6B"
+          strokeWidth="1"
+          opacity="0.35"
+        />
+        <circle
+          cx="200"
+          cy="220"
+          r="100"
+          stroke="#B03A2E"
+          strokeWidth="1"
+          opacity="0.25"
         />
         <path
-          d="M120 270C130 190 200 140 270 160C320 175 340 230 320 285C300 340 240 370 180 350C145 338 115 310 120 270Z"
-          fill="rgba(255,255,255,0.12)"
-        />
-        <circle cx="280" cy="150" r="18" fill="rgba(255,255,255,0.35)" />
-        <path
-          d="M90 390C150 420 250 430 330 390"
-          stroke="rgba(255,255,255,0.55)"
+          d="M90 220C90 140 150 80 230 90C300 99 340 170 320 240C300 310 220 350 150 330C110 318 90 270 90 220Z"
+          stroke="#FF6B6B"
           strokeWidth="1.5"
-          strokeLinecap="round"
+          opacity="0.55"
         />
+        <line
+          x1="70"
+          y1="380"
+          x2="330"
+          y2="140"
+          stroke="#3B2A24"
+          strokeWidth="0.75"
+          opacity="0.15"
+        />
+        <circle cx="280" cy="140" r="5" fill="#FF6B6B" opacity="0.7" />
       </svg>
       <div className="absolute inset-x-0 bottom-0 p-6">
-        <p className="font-display text-3xl text-white">Jodie M.</p>
-        <p className="mt-1 text-sm uppercase tracking-[0.14em] text-white/80">
+        <p className="font-script text-4xl text-coral-500">Jodie</p>
+        <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-ink-500">
           Ouverture · Clarté · Talents
         </p>
       </div>

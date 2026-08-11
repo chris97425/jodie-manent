@@ -1,13 +1,17 @@
 # Jodie Manent — Site vitrine
 
-Site vitrine démonstrateur pour **Jodie Manent**, coach professionnelle certifiée (RNCP), spécialiste des **Intelligences et Natures Multiples (INM)** — Sainte-Marie, La Réunion.
+Site vitrine pour **Jodie Manent**, coach professionnelle certifiée (RNCP), spécialiste des **Intelligences et Natures Multiples (INM)** — Sainte-Marie, La Réunion.
+
+## Direction artistique
+
+- Palette : corail `#FF6B6B` (accents/CTA) · crème `#FFF9F2` / `#FFF5E6` · brun encre `#3B2A24` · footer anthracite `#2A201C`
+- Typo : **Manrope** (titres & corps) · **Parisienne** (accent script rare, écho du logo)
+- Export statique GitHub Pages
 
 ## Stack
 
-- Next.js 16 (App Router) — export statique pour GitHub Pages
-- TypeScript · Tailwind CSS v4 · GSAP (ScrollTrigger)
-- Lucide · Google Fonts (Great Vibes + Manrope)
-- Design system maison (tokens corail, grille 8 px, composant-first)
+- Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · GSAP (ScrollTrigger)
+- Lucide · Google Fonts
 
 ## Développement
 
@@ -19,36 +23,16 @@ npm run dev
 Ouvrir [http://localhost:3000/jodie-manent/](http://localhost:3000/jodie-manent/) (`basePath` actif).
 
 ```bash
-npm run build   # génère le dossier `out/`
+npm run build
 npm run lint
 ```
 
-## Déploiement (GitHub Pages)
+## Déploiement
 
-- `next.config.ts` : `output: 'export'`, `basePath: '/jodie-manent'`, `assetPrefix: '/jodie-manent/'`, `images.unoptimized`, `trailingSlash`
-- Workflow : `.github/workflows/deploy.yml` (build sur `main` → `upload-pages-artifact` → `deploy-pages`)
+- `output: 'export'`, `basePath: '/jodie-manent'`, `assetPrefix: '/jodie-manent/'`
+- Workflow : `.github/workflows/deploy.yml`
 - URL : https://chris97425.github.io/jodie-manent/
-
-Activer GitHub Pages sur le dépôt : Source = **GitHub Actions**.
-
-## Pages
-
-Accueil · À propos · Offres · Témoignages · Contact · Mentions légales · Politique de confidentialité
 
 ## Préparation Supabase (non branché)
 
-1. Créer un projet Supabase dédié.
-2. Copier `.env.example` vers `.env.local`.
-3. Schéma futur (commenté) :
-
-```sql
--- create table contact_messages (
---   id uuid primary key default gen_random_uuid(),
---   name text not null,
---   email text not null,
---   message text not null,
---   created_at timestamptz default now()
--- );
-```
-
-Les clients `src/lib/supabase/client.ts` et `server.ts` retombent en mode démo si les clés sont absentes. Le build Pages n'utilise aucune variable d'environnement.
+Voir `.env.example` et `src/lib/supabase/`.

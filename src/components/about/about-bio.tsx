@@ -1,7 +1,7 @@
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
 import { AbstractPortrait } from "@/components/about/abstract-portrait";
 import { Container } from "@/components/ui/container";
-import { SITE_DESCRIPTION } from "@/lib/site";
+import { SITE_DESCRIPTION, SITE_HEADLINE } from "@/lib/site";
 
 const milestones = [
   {
@@ -33,30 +33,28 @@ export function AboutBio() {
 
           <div>
             <RevealOnScroll>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-coral-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-coral-800">
                 Parcours
               </p>
-              <h2 className="mt-3 font-display text-4xl text-ink-900 sm:text-5xl">
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink-700 sm:text-4xl">
                 Une coach, une approche, votre rythme
               </h2>
-              <p className="mt-5 text-lg leading-relaxed text-ink-600">
+              <p className="mt-5 text-lg leading-relaxed text-ink-500">
                 {SITE_DESCRIPTION}
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-ink-600">
-                J&apos;aide à clarifier et structurer les transitions
-                professionnelles — avec un cadre bienveillant, structurant, et
-                une lecture fine de vos talents.
+              <p className="mt-4 text-lg font-semibold leading-relaxed text-ink-700">
+                {SITE_HEADLINE}
               </p>
             </RevealOnScroll>
 
-            <ul className="mt-8 space-y-4">
+            <ul className="mt-8 space-y-3">
               {milestones.map((item, index) => (
                 <RevealOnScroll key={item.title} delay={index * 0.05}>
-                  <li className="rounded-2xl bg-warm-50 px-5 py-4">
-                    <p className="text-sm font-semibold uppercase tracking-[0.12em] text-coral-600">
+                  <li className="rounded-xl border border-cream-200 bg-cream-50 px-5 py-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-coral-800">
                       {item.title}
                     </p>
-                    <p className="mt-1 text-base text-ink-700">{item.text}</p>
+                    <p className="mt-1 text-base text-ink-600">{item.text}</p>
                   </li>
                 </RevealOnScroll>
               ))}

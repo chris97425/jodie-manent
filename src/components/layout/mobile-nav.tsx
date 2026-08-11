@@ -36,17 +36,19 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
     >
       <button
         type="button"
-        className="absolute inset-0 bg-ink-900/40 transition-opacity"
+        className="absolute inset-0 bg-ink-800/45 transition-opacity"
         aria-label="Fermer le menu"
         onClick={onClose}
       />
-      <nav className="absolute inset-y-0 right-0 flex w-[min(100%,20rem)] flex-col bg-warm-50 shadow-xl">
-        <div className="flex items-center justify-between border-b border-coral-100 px-4 py-4">
-          <p className="font-display text-2xl text-coral-600">Menu</p>
+      <nav className="absolute inset-y-0 right-0 flex w-[min(100%,20rem)] flex-col bg-cream-50 shadow-xl">
+        <div className="flex items-center justify-between border-b border-cream-200 px-4 py-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-ink-700">
+            Menu
+          </p>
           <button
             type="button"
             onClick={onClose}
-            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-xl text-ink-800 transition-colors hover:bg-coral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:scale-95"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-ink-700 transition-colors hover:bg-cream-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:scale-95"
             aria-label="Fermer le menu"
           >
             <X aria-hidden="true" className="h-5 w-5" />
@@ -58,16 +60,16 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
               <Link
                 href={item.href}
                 onClick={onClose}
-                className="flex min-h-11 items-center rounded-xl px-3 text-base font-medium text-ink-800 transition-colors hover:bg-coral-50 hover:text-coral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:bg-coral-100"
+                className="flex min-h-11 items-center rounded-lg px-3 text-base font-medium text-ink-700 transition-colors hover:bg-cream-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:bg-cream-200"
               >
                 {item.label}
               </Link>
             </li>
           ))}
         </ul>
-        <div className="border-t border-coral-100 p-4" onClick={onClose}>
+        <div className="border-t border-cream-200 p-4" onClick={onClose}>
           <Button href="/contact/" className="w-full">
-            Me contacter
+            Je prends RDV
           </Button>
         </div>
       </nav>

@@ -1,5 +1,8 @@
 export const SITE_NAME = "Jodie Manent";
 export const SITE_TAGLINE = "Révélons VOS talents ensemble !";
+/** Accroche officielle (bannière) — hero */
+export const SITE_HERO =
+  "Je vous aide à sortir du flou et à construire un projet professionnel qui VOUS ressemble.";
 export const SITE_HEADLINE =
   "J'aide à clarifier et structurer les transitions professionnelles";
 export const SITE_DESCRIPTION =
@@ -36,7 +39,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: "linkedin",
     label: "LinkedIn — profil",
-    href: "https://www.linkedin.com/in/jodie-manent-8b727717",
+    href: "https://re.linkedin.com/in/jodie-manent-8b727717",
     external: true,
   },
   {

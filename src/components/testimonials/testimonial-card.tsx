@@ -15,8 +15,8 @@ export function TestimonialCard({
     <figure
       className={
         featured
-          ? "rounded-3xl bg-coral-500 px-6 py-10 text-white sm:px-10"
-          : "rounded-3xl border border-coral-100 bg-white px-6 py-8 sm:px-8"
+          ? "rounded-2xl bg-coral-500 px-6 py-10 text-white sm:px-10"
+          : "rounded-2xl border border-cream-200 bg-white px-6 py-8 sm:px-8"
       }
     >
       <Quote
@@ -24,14 +24,14 @@ export function TestimonialCard({
         className={
           featured
             ? "mb-4 h-7 w-7 text-white/70"
-            : "mb-4 h-7 w-7 text-coral-400"
+            : "mb-4 h-7 w-7 text-coral-500"
         }
       />
       <blockquote
         className={
           featured
-            ? "font-display text-3xl leading-snug sm:text-4xl"
-            : "font-display text-2xl leading-snug text-ink-900 sm:text-3xl"
+            ? "text-2xl font-semibold leading-snug tracking-tight sm:text-3xl"
+            : "text-xl font-semibold leading-snug tracking-tight text-ink-700 sm:text-2xl"
         }
       >
         « {quote} »
@@ -39,8 +39,8 @@ export function TestimonialCard({
       <figcaption
         className={
           featured
-            ? "mt-6 text-sm uppercase tracking-[0.14em] text-white/80"
-            : "mt-6 text-sm uppercase tracking-[0.14em] text-ink-500"
+            ? "mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-white/80"
+            : "mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-ink-400"
         }
       >
         {attribution}

@@ -6,29 +6,24 @@ import { SITE_TAGLINE } from "@/lib/site";
 export function FinalCta() {
   return (
     <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
+      <div aria-hidden="true" className="absolute inset-0 bg-coral-500" />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(120deg,_#ff6b6b_0%,_#f25555_55%,_#e24a4a_100%)]"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute -left-16 top-0 h-56 w-56 rounded-full bg-white/10 blur-2xl"
+        className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(176,58,46,0.25)_0%,_transparent_55%)]"
       />
       <Container className="relative">
         <RevealOnScroll>
           <div className="mx-auto max-w-2xl text-center text-white">
-            <p className="font-display text-4xl sm:text-5xl">{SITE_TAGLINE}</p>
+            <p className="text-2xl font-bold tracking-tight sm:text-3xl">
+              {SITE_TAGLINE}
+            </p>
             <p className="mt-4 text-lg text-white/90">
-              Parlons de votre transition, de vos talents, de la suite — sans
-              engagement, sur devis.
+              Parlons de votre transition et de vos talents — sans engagement,
+              sur devis.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Button
-                href="/contact/"
-                className="bg-white text-coral-700 hover:bg-warm-50"
-                size="lg"
-              >
-                Prendre contact
+              <Button href="/contact/" variant="cream" size="lg">
+                Je prends RDV
               </Button>
               <Button
                 href="/a-propos/"

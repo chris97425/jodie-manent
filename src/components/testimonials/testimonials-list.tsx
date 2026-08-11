@@ -8,7 +8,7 @@ import { TESTIMONIAL } from "@/lib/offers";
 export function TestimonialsList() {
   return (
     <Section
-      className="bg-warm-50"
+      className="bg-cream-100"
       eyebrow="Voix réelles"
       title="Ce qui a été dit — et ce qui viendra"
       description="Un seul témoignage vérifié pour l'instant. Les espaces ci-dessous accueilleront de futurs retours, sans inventer de citations."
@@ -32,7 +32,7 @@ export function TestimonialsList() {
         </RevealOnScroll>
       </div>
       <div className="mt-12 text-center">
-        <p className="text-base text-ink-600">
+        <p className="text-base text-ink-500">
           Vous avez été accompagné·e et souhaitez partager un retour ?
         </p>
         <div className="mt-4">
