@@ -20,10 +20,7 @@ export function AudienceProfiles() {
             <RevealOnScroll key={door.id} delay={index * 0.06}>
               <Link
                 href={door.href}
-              <Link
-                href={door.href}
                 className="group flex h-full flex-col rounded-3xl border border-ink-700/5 bg-white p-6 transition-all hover:border-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 sm:p-8"
-              >
               >
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50 text-coral-600 transition-colors group-hover:bg-coral-50">
                   <Icon aria-hidden="true" className="h-5 w-5" />
