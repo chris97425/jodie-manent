@@ -44,7 +44,7 @@ export function MentionsContent() {
             value={
               <>
                 {SITE_LEGAL_INFO.registeredOffice}{" "}
-                <span className="text-ink-400">
+                <span className="text-ink-500">
                   ({SITE_LEGAL_INFO.registeredOfficeHint})
                 </span>
               </>
@@ -61,7 +61,7 @@ export function MentionsContent() {
                 Uniquement via le{" "}
                 <Link
                   href="/contact/"
-                  className="font-semibold text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+                  className="font-semibold text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
                 >
                   formulaire de contact
                 </Link>
@@ -75,7 +75,7 @@ export function MentionsContent() {
             value={
               <a
                 href={SITE_LEGAL_INFO.websiteUrl}
-                className="text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+                className="text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
               >
                 {SITE_LEGAL_INFO.websiteDisplay}
               </a>
@@ -106,7 +106,7 @@ export function MentionsContent() {
                   href={LEGAL_HOSTS.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+                  className="text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
                 >
                   {LEGAL_HOSTS.url}
                 </a>
@@ -166,7 +166,7 @@ export function MentionsContent() {
           Le traitement des données personnelles est décrit dans la{" "}
           <Link
             href="/politique-de-confidentialite/"
-            className="font-semibold text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+            className="font-semibold text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
           >
             politique de confidentialité
           </Link>

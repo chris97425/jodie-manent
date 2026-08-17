@@ -37,7 +37,7 @@ export default function BilanPage() {
           {BILAN_OBJECTIVES.map((objective, index) => (
             <RevealOnScroll key={objective.id} delay={index * 0.05}>
               <article className="h-full rounded-3xl border border-cream-200 bg-cream-50 p-6 sm:p-8">
-                <span className="font-mono text-xs text-ink-300">
+                <span className="font-mono text-xs text-ink-500">
                   0{index + 1}
                 </span>
                 <h3 className="mt-3 font-display text-xl font-semibold text-ink-700">
@@ -67,7 +67,7 @@ export default function BilanPage() {
                 )}
               >
                 {format.recommended ? (
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-coral-600">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-coral-800">
                     Recommandé
                   </p>
                 ) : null}

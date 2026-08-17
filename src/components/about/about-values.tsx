@@ -23,7 +23,7 @@ export function AboutValues() {
           <blockquote className="font-display text-xl italic leading-relaxed text-ink-700 sm:text-2xl">
             « {ABOUT_EINSTEIN_QUOTE} »
           </blockquote>
-          <figcaption className="mt-4 text-sm uppercase tracking-widest text-ink-400">
+          <figcaption className="mt-4 text-sm uppercase tracking-widest text-ink-500">
             — Albert Einstein
           </figcaption>
           <p className="mt-6 text-base leading-relaxed text-ink-500">

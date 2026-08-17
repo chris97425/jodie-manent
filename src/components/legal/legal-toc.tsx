@@ -55,7 +55,13 @@ export function LegalToc({
     if (!target) return;
     const top =
       target.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET;
-    window.scrollTo({ top, behavior: "smooth" });
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    window.scrollTo({
+      top,
+      behavior: prefersReduced ? "auto" : "smooth",
+    });
     setActiveId(id);
     history.replaceState(null, "", `#${id}`);
   }
@@ -79,7 +85,7 @@ export function LegalToc({
                 onClick={(event) => handleClick(event, section.id)}
                 aria-current={active ? "true" : undefined}
                 className={cx(
-                  "flex min-h-11 items-center gap-3 rounded-lg px-3 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:scale-[0.99]",
+                  "flex min-h-11 items-center gap-3 rounded-lg px-3 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 active:scale-[0.99]",
                   active
                     ? "bg-white font-semibold text-coral-800 shadow-sm"
                     : "text-ink-600 hover:bg-white/70 hover:text-ink-700",
@@ -88,12 +94,12 @@ export function LegalToc({
                 <span
                   className={cx(
                     "tabular-nums text-xs font-semibold tracking-wide",
-                    active ? "text-coral-500" : "text-ink-400",
+                    active ? "text-coral-800" : "text-ink-500",
                   )}
                 >
                   {number}
                 </span>
-                <span>{section.label}</span>
+                <span className="min-w-0 flex-1 leading-snug">{section.label}</span>
               </a>
             </li>
           );

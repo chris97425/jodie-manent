@@ -8,7 +8,7 @@ export function InterventionsBand() {
       <Container>
         <RevealOnScroll>
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-400">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-600">
               Interventions
             </p>
             <ul className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-8">
