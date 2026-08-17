@@ -28,7 +28,7 @@ export function AboutBio() {
 
           <div>
             <RevealOnScroll>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-coral-600">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-coral-800">
                 Parcours
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink-700 sm:text-4xl">

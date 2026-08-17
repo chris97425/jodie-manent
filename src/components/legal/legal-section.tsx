@@ -21,7 +21,7 @@ export function LegalSection({
       className="scroll-mt-28 border-b border-cream-200 pb-10 last:border-b-0 last:pb-0"
     >
       <header className="mb-4 flex items-baseline gap-3">
-        <span className="text-sm font-semibold tabular-nums text-coral-500">
+        <span className="text-sm font-semibold tabular-nums text-coral-800">
           {number}
         </span>
         <h2 className="text-2xl font-bold tracking-tight text-ink-700">
