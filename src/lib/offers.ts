@@ -5,48 +5,50 @@ export type Offer = {
   description: string;
   modalities: string;
   pricing: string;
+  href: string;
   featured?: boolean;
 };
 
-/** Trois offres principales (cartes) — ordre demandé */
 export const OFFERS: Offer[] = [
-  {
-    id: "bilans",
-    title: "Bilan de compétences",
-    summary:
-      "Approche des Intelligences et Natures Multiples pour construire un projet professionnel à votre image.",
-    description:
-      "Basés sur l'approche des Intelligences et Natures Multiples, mes bilans de compétences vous aident à construire un projet professionnel à votre image.",
-    modalities:
-      "Présentiel ou distanciel — à La Réunion et en métropole.",
-    pricing: "Sur devis",
-    featured: true,
-  },
   {
     id: "formations",
     title: "Formation",
     summary:
-      "Intelligences multiples, talents et transitions — des formats pour mieux se connaître et avancer.",
+      "Posture managériale, coopération et connaissance de soi — des formats construits avec vous.",
     description:
-      "Des formations sur des thèmes liés aux intelligences multiples, aux talents et aux transitions professionnelles.",
+      "Des formations sur les Intelligences et Natures Multiples, au service du management (offre prioritaire, 3 jours) et des collectifs. Présentiel ou distanciel, à La Réunion, dans l'océan Indien et à distance.",
     modalities:
-      "Présentiel ou distanciel — à La Réunion et en métropole.",
+      "Présentiel ou distanciel — La Réunion, océan Indien et à distance.",
     pricing: "Sur devis",
+    href: "/entreprises-equipes/",
+    featured: true,
   },
   {
-    id: "coaching",
-    title: "Coaching professionnel",
+    id: "bilans",
+    title: "Bilans de compétences et coaching professionnel",
     summary:
-      "Accompagnement des transitions professionnelles, séance après séance.",
+      "Faire le point, clarifier une direction, valider un projet et passer à l'action.",
     description:
-      "Un coaching professionnel pour clarifier et structurer vos transitions professionnelles, avec un cadre bienveillant et exigeant.",
+      "Trois formats de bilan — Essentiel 13 h, Medium 16 h, Approfondi 20 h — et un coaching professionnel individuel, orienté action.",
     modalities:
-      "Présentiel ou distanciel — à La Réunion et en métropole.",
+      "Présentiel ou distanciel — La Réunion, océan Indien et à distance.",
     pricing: "Sur devis",
+    href: "/bilan-de-competences/",
+  },
+  {
+    id: "conferences",
+    title: "Conférences et ateliers de sensibilisation",
+    summary:
+      "Faire découvrir les potentiels et la coopération à un large public.",
+    description:
+      "Un format court et fédérateur pour ouvrir un dialogue sur les talents, la motivation et la coopération.",
+    modalities:
+      "Présentiel ou distanciel — La Réunion, océan Indien et à distance.",
+    pricing: "Sur devis",
+    href: "/entreprises-equipes/#conferences",
   },
 ];
 
-/** Mention discrète — pas une 4ᵉ carte principale */
 export const MENTORAT_NOTE = {
   id: "mentorat",
   title: "Mentorat collectif POWAO",
@@ -65,8 +67,3 @@ export const SOCIAL_PROOF = [
     description: "Atelier — Mission Locale Nord Réunion",
   },
 ] as const;
-
-export const TESTIMONIAL = {
-  quote: "un pas vers plus de clarté, de confiance, de sens",
-  attribution: "Cliente — bilan de compétences",
-} as const;

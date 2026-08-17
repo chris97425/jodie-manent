@@ -122,19 +122,19 @@ export const QUIZ_RESULTS: Record<
     title: "Bilan de compétences",
     summary:
       "Un bilan basé sur les Intelligences et Natures Multiples pour construire un projet à votre image.",
-    href: "/offres/#bilans",
+    href: "/bilan-de-competences/",
   },
   coaching: {
     title: "Coaching professionnel",
     summary:
       "Un accompagnement séance après séance pour clarifier et structurer votre transition.",
-    href: "/offres/#coaching",
+    href: "/bilan-de-competences/",
   },
   formations: {
     title: "Formation",
     summary:
       "Des formats pour explorer les intelligences multiples, vos talents et vos transitions.",
-    href: "/offres/#formations",
+    href: "/entreprises-equipes/",
   },
 };
 

@@ -2,9 +2,9 @@ import { Container } from "@/components/ui/container";
 
 const ITEMS = [
   "Coach professionnelle certifiée RNCP",
-  "Spécialiste des Intelligences et Natures Multiples",
-  "Sainte-Marie, La Réunion",
-  "Interventions Réunion & métropole",
+  "Praticienne Intelligences et Natures Multiples",
+  "La Réunion & océan Indien",
+  "Présentiel et à distance",
 ] as const;
 
 export function TrustBand() {

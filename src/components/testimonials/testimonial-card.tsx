@@ -1,49 +1,47 @@
 import { Quote } from "lucide-react";
+import { cx } from "@/lib/cx";
+import type { Testimonial } from "@/lib/content/testimonials";
 
 type TestimonialCardProps = {
-  quote: string;
-  attribution: string;
+  testimonial: Testimonial;
   featured?: boolean;
 };
 
 export function TestimonialCard({
-  quote,
-  attribution,
+  testimonial,
   featured = false,
 }: TestimonialCardProps) {
   return (
     <figure
-      className={
+      className={cx(
+        "flex h-full flex-col rounded-3xl px-6 py-8 sm:px-8",
         featured
-          ? "rounded-2xl bg-coral-500 px-6 py-10 text-white sm:px-10"
-          : "rounded-2xl border border-cream-200 bg-white px-6 py-8 sm:px-8"
-      }
+          ? "bg-ink-900 text-cream-50"
+          : "border border-cream-200 bg-white",
+      )}
     >
       <Quote
         aria-hidden="true"
-        className={
-          featured
-            ? "mb-4 h-7 w-7 text-white/70"
-            : "mb-4 h-7 w-7 text-coral-500"
-        }
+        className={cx(
+          "mb-4 h-6 w-6",
+          featured ? "text-coral-400" : "text-coral-500",
+        )}
       />
       <blockquote
-        className={
-          featured
-            ? "text-2xl font-semibold leading-snug tracking-tight sm:text-3xl"
-            : "text-xl font-semibold leading-snug tracking-tight text-ink-700 sm:text-2xl"
-        }
+        className={cx(
+          "flex-1 text-base leading-relaxed sm:text-lg",
+          featured ? "text-cream-50" : "text-ink-700",
+        )}
       >
-        « {quote} »
+        « {testimonial.quote} »
       </blockquote>
       <figcaption
-        className={
-          featured
-            ? "mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-white/80"
-            : "mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-ink-400"
-        }
+        className={cx(
+          "mt-6 text-xs font-semibold uppercase tracking-[0.14em]",
+          featured ? "text-coral-300" : "text-ink-500",
+        )}
       >
-        {attribution}
+        {testimonial.attribution}
       </figcaption>
     </figure>
   );

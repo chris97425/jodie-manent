@@ -6,39 +6,33 @@ export type FaqItem = {
 
 export const FAQ_ITEMS: FaqItem[] = [
   {
-    id: "bilan",
-    question: "Qu'est-ce qu'un bilan de compétences ?",
+    id: "deroulement-bilan",
+    question: "Comment se déroule un bilan de compétences ?",
     answer:
-      "Un bilan de compétences vous aide à faire le point sur votre parcours, identifier vos talents et construire un projet professionnel à votre image. Chez Jodie Manent, il s'appuie sur l'approche des Intelligences et Natures Multiples.",
-  },
-  {
-    id: "deroulement",
-    question: "Comment se déroule l'accompagnement ?",
-    answer:
-      "Après un premier échange pour clarifier votre besoin, nous définissons ensemble le format adapté (bilan, coaching ou formation). Les modalités précises sont précisées sur devis, avant tout engagement.",
-  },
-  {
-    id: "modalite",
-    question: "En présentiel ou à distance ?",
-    answer:
-      "Les accompagnements sont proposés en présentiel ou à distance, à La Réunion et en métropole, selon vos besoins et les créneaux convenus.",
-  },
-  {
-    id: "duree",
-    question: "Combien de temps dure un accompagnement ?",
-    answer:
-      "La durée dépend de votre situation et du format choisi. Les durées précises seront communiquées sur devis : [À COMPLÉTER].",
+      "Après un premier échange pour clarifier votre situation, nous choisissons ensemble le format le plus juste : Essentiel (13 h), Medium (16 h) ou Approfondi (20 h). Le parcours combine des séances d'accompagnement, un travail de connaissance de soi — notamment via les Intelligences et Natures Multiples — et un plan d'action concret. Les modalités précises se précisent avant tout engagement.",
   },
   {
     id: "financement",
-    question: "Le bilan est-il finançable ?",
+    question: "Les formations et bilans sont-ils finançables (OPCO, CPF) ?",
     answer:
-      "Des dispositifs de financement peuvent exister selon votre situation. Les modalités exactes restent à confirmer : [À COMPLÉTER]. Aucune affirmation CPF n'est faite ici sans vérification.",
+      "Oui, selon votre situation. Un bilan de compétences peut notamment être financé via le CPF. Les formations destinées aux entreprises et aux équipes peuvent s'inscrire dans des dispositifs OPCO. Les conditions exactes se confirment lors du premier échange, en fonction de votre statut et de l'organisme financeur.",
   },
   {
-    id: "rdv",
-    question: "Comment prendre rendez-vous ?",
+    id: "distance",
+    question: "Intervenez-vous à distance ?",
     answer:
-      "Utilisez le formulaire de contact du site pour décrire votre besoin. Jodie vous répondra pour convenir d'un échange et, le cas échéant, d'un devis.",
+      "Oui. Je suis basée à La Réunion, j'interviens sur l'île, dans l'océan Indien, et à distance en visioconférence.",
+  },
+  {
+    id: "coaching-vs-formation",
+    question: "Quelle est la différence entre coaching et formation ?",
+    answer:
+      "Le coaching est un accompagnement individuel, sur plusieurs séances, centré sur un objectif concret et votre réalité professionnelle. La formation est un temps collectif (ou un parcours construit avec une organisation) pour transmettre des repères, expérimenter et faire évoluer les pratiques — par exemple la posture managériale ou la coopération d'équipe.",
+  },
+  {
+    id: "nombre-seances",
+    question: "Combien de séances pour un coaching professionnel ?",
+    answer:
+      "Un coaching se construit sur plusieurs séances, réparties dans le temps, selon l'objectif défini ensemble. Le rythme et le nombre de rendez-vous se précisent lors du premier échange — sans grille unique imposée à l'avance.",
   },
 ];

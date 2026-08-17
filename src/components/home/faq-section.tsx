@@ -1,5 +1,6 @@
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
 import { Accordion } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
 import { FAQ_ITEMS } from "@/lib/content/faq";
 
@@ -21,6 +22,11 @@ export function FaqSection() {
           }))}
         />
       </RevealOnScroll>
+      <div className="mt-8">
+        <Button href="/faq/" variant="secondary">
+          Voir toutes les questions
+        </Button>
+      </div>
     </Section>
   );
 }

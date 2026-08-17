@@ -15,4 +15,16 @@ export function withBasePath(path: string): string {
   return `${BASE_PATH}${normalized}`;
 }
 
-export const LOGO_PATH = withBasePath("/logo_jodie.png");
+export const LOGO_PATH = withBasePath("/logo-coral-transparent.png");
+
+export const IMAGES = {
+  hero: "/images/jodie-photo-hero.jpg",
+  portraitParc: "/images/jodie-parc.jpg",
+  portraitAbout: "/images/jodie-about.jpg",
+  atelier: "/images/atelier-cooperation.jpg",
+  paysage: "/images/paysage-reunion.jpg",
+  formation: "/images/formation.png",
+  bilan: "/images/bilan.png",
+  coaching: "/images/coaching.png",
+  cta: "/images/cta.png",
+} as const;

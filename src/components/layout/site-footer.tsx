@@ -1,51 +1,58 @@
 import Link from "next/link";
+import { MapPin } from "lucide-react";
 import { BrandLogo } from "@/components/ui/brand-logo";
 import { Container } from "@/components/ui/container";
-import {
-  FacebookIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  MaltIcon,
-} from "@/components/ui/social-icons";
+import { LinkedInIcon } from "@/components/ui/social-icons";
 import { LEGAL_NAV_LINKS } from "@/lib/legal/site-legal-info";
-import { SITE_NAME, SITE_TAGLINE, SOCIAL_LINKS } from "@/lib/site";
-
-const iconMap = {
-  linkedin: LinkedInIcon,
-  facebook: FacebookIcon,
-  instagram: InstagramIcon,
-  malt: MaltIcon,
-} as const;
+import {
+  FOOTER_DISCOVER,
+  FOOTER_NAV,
+  LINKEDIN_URL,
+  SITE_COVERAGE,
+  SITE_NAME,
+} from "@/lib/site";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-footer text-cream-100">
+    <footer className="bg-footer text-cream-50">
       <Container className="py-12 sm:py-16">
-        <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
-          <div>
-            <div className="flex items-center gap-3">
+        <div className="grid gap-10 lg:grid-cols-4">
+          <div className="lg:col-span-2">
+            <Link
+              href="/"
+              className="inline-flex items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400"
+              aria-label={`${SITE_NAME} — Accueil`}
+            >
               <BrandLogo
-                size={40}
+                variant="onCoral"
+                size={72}
                 alt=""
-                className="h-10 w-10 rounded-md"
+                className="h-16 w-16 rounded-xl"
               />
-              <div>
-                <p className="font-script text-3xl leading-none text-coral-400">
-                  Jodie
-                </p>
-                <p className="text-sm font-semibold tracking-wide text-cream-100">
-                  Manent
-                </p>
-              </div>
-            </div>
-            <p className="mt-4 max-w-sm text-base leading-relaxed text-cream-200">
-              {SITE_TAGLINE}
+            </Link>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream-100/85">
+              Coach professionnelle certifiée, formatrice et consultante.
+              Accompagnement des personnes, managers et équipes pour révéler
+              les potentiels et renforcer la coopération.
             </p>
-            <p className="mt-3 text-sm text-cream-200/80">
-              Coach professionnelle certifiée (RNCP) · Sainte-Marie, La Réunion
+            <p className="mt-4 flex items-center gap-3 text-sm text-cream-100/85">
+              <MapPin
+                aria-hidden="true"
+                className="h-4 w-4 shrink-0 text-coral-400"
+              />
+              {SITE_COVERAGE}
             </p>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex min-h-11 items-center gap-2 text-sm text-cream-50 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400"
+            >
+              <LinkedInIcon className="h-4 w-4" />
+              Profil LinkedIn
+            </a>
           </div>
 
           <div>
@@ -53,15 +60,11 @@ export function SiteFooter() {
               Navigation
             </p>
             <ul className="mt-4 space-y-1">
-              {[
-                { href: "/a-propos/", label: "À propos" },
-                { href: "/offres/", label: "Offres" },
-                { href: "/contact/", label: "Contact" },
-              ].map((item) => (
+              {FOOTER_NAV.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="inline-flex min-h-11 items-center text-cream-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 active:text-coral-200"
+                    className="inline-flex min-h-11 items-center text-sm text-cream-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400"
                   >
                     {item.label}
                   </Link>
@@ -72,33 +75,26 @@ export function SiteFooter() {
 
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-coral-300">
-              Réseaux
+              Découvrir
             </p>
             <ul className="mt-4 space-y-1">
-              {SOCIAL_LINKS.map((link) => {
-                const Icon = iconMap[link.id as keyof typeof iconMap];
-                return (
-                  <li key={link.id}>
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex min-h-11 items-center gap-2 text-cream-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400 active:text-coral-200"
-                      aria-label={link.label}
-                    >
-                      <Icon className="h-4 w-4" />
-                      <span className="text-sm sm:text-base">{link.label}</span>
-                    </a>
-                  </li>
-                );
-              })}
+              {FOOTER_DISCOVER.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="inline-flex min-h-11 items-center text-sm text-cream-100 transition-colors hover:text-coral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-cream-100 sm:flex-row sm:items-center sm:justify-between sm:text-base">
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-cream-100/80 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {SITE_NAME}. Tous droits réservés.
+            © {year} {SITE_NAME} — La Réunion
           </p>
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             {LEGAL_NAV_LINKS.map((link) => (

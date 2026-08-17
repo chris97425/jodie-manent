@@ -1,103 +1,61 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { GraduationCap, Mic, Briefcase } from "lucide-react";
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
-import { Card } from "@/components/ui/card";
-import { Section } from "@/components/ui/section";
-import { Button } from "@/components/ui/button";
-import { withBasePath } from "@/lib/assets";
-import { MENTORAT_NOTE, OFFERS } from "@/lib/offers";
+import { Container } from "@/components/ui/container";
+import {
+  HOME_ACCOMPANIMENTS,
+  HOME_PEDAGOGY,
+} from "@/lib/content/home";
 
-const OFFER_IMAGES: Record<string, { src: string; alt: string }> = {
-  bilans: {
-    src: withBasePath("/images/bilan.png"),
-    alt: "Visuel abstrait — boussole pour le bilan de compétences",
-  },
-  coaching: {
-    src: withBasePath("/images/coaching.png"),
-    alt: "Visuel abstrait — formes en dialogue pour le coaching",
-  },
-  formations: {
-    src: withBasePath("/images/formation.png"),
-    alt: "Visuel abstrait — spirale ascendante pour la formation",
-  },
-};
-
-/** Ordre d'affichage demandé : Bilan / Coaching / Formations */
-const HOME_OFFER_ORDER = ["bilans", "coaching", "formations"] as const;
+const ICONS = [GraduationCap, Briefcase, Mic] as const;
 
 export function OffersPreview() {
-  const ordered = HOME_OFFER_ORDER.map(
-    (id) => OFFERS.find((offer) => offer.id === id)!,
-  );
-
   return (
-    <Section
-      className="bg-cream-100"
-      eyebrow="Accompagnements"
-      title="Trois chemins pour clarifier votre projet"
-      description="Bilan, coaching et formation — des formats adaptés à votre rythme, sur devis."
-    >
-      <div className="grid gap-6 md:grid-cols-3">
-        {ordered.map((offer, index) => {
-          const image = OFFER_IMAGES[offer.id];
-          return (
-            <RevealOnScroll key={offer.id} delay={index * 0.08}>
-              <Card
-                interactive
-                className="group flex h-full flex-col overflow-hidden p-0"
-              >
-                <div className="aspect-[4/3] overflow-hidden bg-cream-50">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={800}
-                    height={600}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-6 sm:p-7">
-                  <h3 className="text-xl font-bold tracking-tight text-ink-700">
-                    {offer.title}
-                  </h3>
-                  <p className="mt-3 flex-1 text-base leading-relaxed text-ink-500">
-                    {offer.summary}
-                  </p>
-                  <p className="mt-4 text-sm font-semibold text-coral-800">
-                    {offer.pricing}
-                  </p>
-                  <Link
-                    href={`/offres/#${offer.id}`}
-                    className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ink-700 transition-colors hover:text-coral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:text-coral-900"
-                  >
-                    En savoir plus
-                    <ArrowRight
-                      aria-hidden="true"
-                      className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-                    />
-                  </Link>
-                </div>
-              </Card>
-            </RevealOnScroll>
-          );
-        })}
-      </div>
+    <section id="accompagnements" className="py-16 sm:py-20 lg:py-24">
+      <Container>
+        <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-16">
+          <RevealOnScroll>
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-ink-700 sm:text-4xl lg:text-5xl">
+              Mes accompagnements
+            </h2>
+            <p className="mt-5 max-w-sm text-base leading-relaxed text-ink-500">
+              {HOME_PEDAGOGY}
+            </p>
+          </RevealOnScroll>
 
-      <RevealOnScroll delay={0.2}>
-        <p className="mt-8 border-t border-cream-200 pt-6 text-sm text-ink-500">
-          <span className="font-semibold text-ink-700">
-            {MENTORAT_NOTE.title}
-          </span>
-          {" — "}
-          {MENTORAT_NOTE.text}
-        </p>
-      </RevealOnScroll>
-
-      <div className="mt-8">
-        <Button href="/offres/" variant="secondary">
-          Voir le détail des offres
-        </Button>
-      </div>
-    </Section>
+          <ul>
+            {HOME_ACCOMPANIMENTS.map((item, index) => {
+              const Icon = ICONS[index] ?? Briefcase;
+              return (
+                <RevealOnScroll key={item.id} delay={index * 0.06}>
+                  <li>
+                    <Link
+                      href={item.href}
+                      className="group flex items-start gap-6 border-b border-ink-700/10 py-7 transition-[padding] hover:pl-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+                    >
+                      <Icon
+                        aria-hidden="true"
+                        className="mt-1 h-5 w-5 shrink-0 text-coral-500"
+                      />
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-lg font-semibold text-ink-700">
+                          {item.title}
+                        </h3>
+                        <p className="mt-1 text-sm text-ink-500">
+                          {item.description}
+                        </p>
+                      </div>
+                      <span className="mt-2 font-mono text-xs text-ink-300">
+                        0{index + 1}
+                      </span>
+                    </Link>
+                  </li>
+                </RevealOnScroll>
+              );
+            })}
+          </ul>
+        </div>
+      </Container>
+    </section>
   );
 }

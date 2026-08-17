@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chris97425.github.io/jodie-manent/sitemap.xml
+Sitemap: https://jodiemanent.fr/sitemap.xml

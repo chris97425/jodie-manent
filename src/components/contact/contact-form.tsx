@@ -1,10 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { CONTACT_REASSURANCE, NEED_TYPES } from "@/lib/content/contact";
 import { useContactForm } from "@/hooks/use-contact-form";
+import type { ContactFormValues } from "@/lib/validation";
 
 const fieldClasses =
-  "mt-2 w-full rounded-lg border border-cream-200 bg-white px-4 py-3 text-base text-ink-700 shadow-sm transition-[border-color,box-shadow] duration-200 placeholder:text-ink-400 hover:border-coral-300 focus:border-coral-500 focus:outline-none focus:ring-2 focus:ring-coral-500/25 disabled:cursor-not-allowed disabled:bg-cream-50 disabled:opacity-60";
+  "mt-2 w-full rounded-xl border border-cream-200 bg-white px-4 py-3 text-base text-ink-700 shadow-sm transition-[border-color,box-shadow] duration-200 placeholder:text-ink-400 hover:border-coral-300 focus:border-coral-500 focus:outline-none focus:ring-2 focus:ring-coral-500/25 disabled:cursor-not-allowed disabled:bg-cream-50 disabled:opacity-60";
 
 export function ContactForm() {
   const {
@@ -23,19 +25,18 @@ export function ContactForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="rounded-2xl border border-cream-200 bg-white p-6 shadow-[0_8px_24px_rgba(59,42,36,0.04)] sm:p-8"
-      aria-describedby="contact-demo-note"
+      className="rounded-3xl border border-cream-200 bg-white p-6 shadow-sm sm:p-8"
+      aria-describedby="contact-reassurance"
     >
       <p
-        id="contact-demo-note"
-        className="mb-6 rounded-lg border border-cream-200 bg-cream-50 px-4 py-3 text-sm text-ink-600"
+        id="contact-reassurance"
+        className="mb-6 rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm text-ink-600"
       >
-        Formulaire en mode <strong>démo</strong> — validation locale, succès
-        simulé, aucun envoi serveur.
+        {CONTACT_REASSURANCE}
       </p>
 
-      <div className="space-y-5">
-        <div>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div className="sm:col-span-1">
           <label htmlFor="name" className="text-sm font-medium text-ink-700">
             Nom
           </label>
@@ -56,6 +57,30 @@ export function ContactForm() {
           {errors.name ? (
             <p id="name-error" className="mt-2 text-sm text-coral-800">
               {errors.name}
+            </p>
+          ) : null}
+        </div>
+
+        <div>
+          <label htmlFor="company" className="text-sm font-medium text-ink-700">
+            Entreprise
+          </label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            autoComplete="organization"
+            maxLength={160}
+            disabled={disabled}
+            value={values.company}
+            onChange={(event) => updateField("company", event.target.value)}
+            className={fieldClasses}
+            aria-invalid={Boolean(errors.company)}
+            aria-describedby={errors.company ? "company-error" : undefined}
+          />
+          {errors.company ? (
+            <p id="company-error" className="mt-2 text-sm text-coral-800">
+              {errors.company}
             </p>
           ) : null}
         </div>
@@ -86,6 +111,64 @@ export function ContactForm() {
         </div>
 
         <div>
+          <label htmlFor="phone" className="text-sm font-medium text-ink-700">
+            Téléphone
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            maxLength={40}
+            disabled={disabled}
+            value={values.phone}
+            onChange={(event) => updateField("phone", event.target.value)}
+            className={fieldClasses}
+            aria-invalid={Boolean(errors.phone)}
+            aria-describedby={errors.phone ? "phone-error" : undefined}
+          />
+          {errors.phone ? (
+            <p id="phone-error" className="mt-2 text-sm text-coral-800">
+              {errors.phone}
+            </p>
+          ) : null}
+        </div>
+
+        <div className="sm:col-span-2">
+          <label htmlFor="needType" className="text-sm font-medium text-ink-700">
+            Type de besoin
+          </label>
+          <select
+            id="needType"
+            name="needType"
+            required
+            disabled={disabled}
+            value={values.needType}
+            onChange={(event) =>
+              updateField(
+                "needType",
+                event.target.value as ContactFormValues["needType"],
+              )
+            }
+            className={fieldClasses}
+            aria-invalid={Boolean(errors.needType)}
+            aria-describedby={errors.needType ? "needType-error" : undefined}
+          >
+            <option value="">Sélectionnez…</option>
+            {NEED_TYPES.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+          {errors.needType ? (
+            <p id="needType-error" className="mt-2 text-sm text-coral-800">
+              {errors.needType}
+            </p>
+          ) : null}
+        </div>
+
+        <div className="sm:col-span-2">
           <label htmlFor="message" className="text-sm font-medium text-ink-700">
             Message
           </label>
@@ -115,8 +198,8 @@ export function ContactForm() {
           role="status"
           className={
             status === "success"
-              ? "mt-5 rounded-lg bg-emerald-50 px-4 py-3 text-sm text-emerald-900"
-              : "mt-5 rounded-lg bg-amber-50 px-4 py-3 text-sm text-amber-950"
+              ? "mt-5 rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-900"
+              : "mt-5 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-950"
           }
         >
           <p>{statusMessage}</p>
@@ -134,7 +217,7 @@ export function ContactForm() {
 
       <div className="mt-6">
         <Button type="submit" disabled={disabled} className="w-full sm:w-auto">
-          {status === "submitting" ? "Envoi en cours…" : "Envoyer le message"}
+          {status === "submitting" ? "Envoi en cours…" : "Envoyer ma demande"}
         </Button>
       </div>
     </form>

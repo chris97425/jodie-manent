@@ -1,46 +1,31 @@
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
-import { TestimonialCard } from "@/components/testimonials/testimonial-card";
-import { PlaceholderSlot } from "@/components/testimonials/placeholder-slot";
-import { TESTIMONIAL } from "@/lib/offers";
+import { TestimonialsBlock } from "@/components/testimonials/testimonials-block";
+import { ALL_TESTIMONIALS } from "@/lib/content/testimonials";
 
 export function TestimonialsList() {
   return (
-    <Section
-      className="bg-cream-100"
-      eyebrow="Voix réelles"
-      title="Ce qui a été dit — et ce qui viendra"
-      description="Un seul témoignage vérifié pour l'instant. Les espaces ci-dessous accueilleront de futurs retours, sans inventer de citations."
-    >
-      <div className="grid gap-6 lg:grid-cols-2">
+    <>
+      <TestimonialsBlock
+        items={ALL_TESTIMONIALS}
+        className="bg-cream-100"
+        eyebrow="Voix réelles"
+        title="Ce que disent les personnes accompagnées"
+        description="Des retours anonymes, tels qu'ils ont été partagés — sans prénom ni nom."
+      />
+      <Section className="bg-cream-50" align="center">
         <RevealOnScroll>
-          <TestimonialCard
-            quote={TESTIMONIAL.quote}
-            attribution={TESTIMONIAL.attribution}
-            featured
-          />
+          <p className="text-base text-ink-500">
+            Vous avez été accompagné·e et souhaitez partager un retour ?
+          </p>
+          <div className="mt-4">
+            <Button href="/contact/" variant="secondary">
+              Écrire un message
+            </Button>
+          </div>
         </RevealOnScroll>
-        <RevealOnScroll delay={0.08}>
-          <PlaceholderSlot label="Témoignage à venir" />
-        </RevealOnScroll>
-        <RevealOnScroll delay={0.12}>
-          <PlaceholderSlot label="Témoignage à venir" />
-        </RevealOnScroll>
-        <RevealOnScroll delay={0.16}>
-          <PlaceholderSlot label="Témoignage à venir" />
-        </RevealOnScroll>
-      </div>
-      <div className="mt-12 text-center">
-        <p className="text-base text-ink-500">
-          Vous avez été accompagné·e et souhaitez partager un retour ?
-        </p>
-        <div className="mt-4">
-          <Button href="/contact/" variant="secondary">
-            Écrire un message
-          </Button>
-        </div>
-      </div>
-    </Section>
+      </Section>
+    </>
   );
 }

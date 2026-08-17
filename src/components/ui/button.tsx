@@ -25,22 +25,22 @@ type ButtonAsLink = SharedProps & {
 export type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const baseClasses =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-6 text-center text-base font-semibold tracking-tight transition-[transform,background-color,color,box-shadow,border-color,opacity] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100";
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 text-center text-sm font-semibold tracking-tight transition-[transform,background-color,color,box-shadow,border-color,opacity,filter] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100";
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-coral-500 text-white shadow-sm hover:bg-coral-800 hover:shadow-md active:bg-coral-900",
+    "bg-coral-500 text-night shadow-sm hover:bg-coral-600 hover:shadow-md active:bg-coral-700",
   secondary:
-    "border-2 border-ink-700 bg-white text-ink-700 hover:border-coral-800 hover:bg-cream-50 hover:text-coral-800 active:bg-cream-100",
+    "border border-ink-700/20 bg-transparent text-ink-700 hover:border-coral-500 hover:bg-white active:bg-cream-100",
   cream:
-    "bg-cream-100 text-ink-800 hover:bg-cream-50 active:bg-cream-200",
+    "bg-cream-50 text-ink-900 hover:bg-white active:bg-cream-100",
   ghost:
-    "bg-transparent text-ink-700 hover:bg-cream-100 hover:text-ink-800",
+    "bg-transparent text-ink-700 hover:bg-cream-100 hover:text-ink-900",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
   md: "min-h-11 px-6 py-2.5",
-  lg: "min-h-12 px-8 py-3 text-lg",
+  lg: "min-h-12 px-8 py-3.5 text-base",
 };
 
 export function Button(props: ButtonProps) {

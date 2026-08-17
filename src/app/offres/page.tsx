@@ -1,20 +1,21 @@
-import type { Metadata } from "next";
 import { OffersGrid } from "@/components/offers/offers-grid";
 import { PageHero } from "@/components/ui/page-hero";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Offres",
+export const metadata = pageMetadata({
+  title: "Accompagnements",
   description:
-    "Coaching professionnel, bilans de compétences INM, formations et mentorat POWAO — accompagnements sur devis, à La Réunion et en métropole.",
-};
+    "Formation, bilans de compétences, coaching professionnel, conférences et ateliers — accompagnements sur devis à La Réunion, dans l'océan Indien et à distance.",
+  path: "/offres/",
+});
 
 export default function OffersPage() {
   return (
     <>
       <PageHero
-        eyebrow="Offres"
-        title="Accompagnements sur devis"
-        description="Bilan, formation et coaching — présentiel ou distanciel, à La Réunion et en métropole. Mentorat POWAO en mention."
+        eyebrow="Accompagnements"
+        title="Des formats construits avec vous"
+        description="Formation, bilan de compétences et coaching, conférences — présentiel ou distanciel, à La Réunion, dans l'océan Indien et à distance."
       />
       <OffersGrid />
     </>

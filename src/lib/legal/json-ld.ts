@@ -18,7 +18,7 @@ export function buildLegalWebPageJsonLd(input: {
       name: SITE_LEGAL_INFO.brandName,
       url: SITE_LEGAL_INFO.websiteUrl,
     },
-    dateModified: "2026-08-11",
+    dateModified: "2026-08-17",
     publisher: {
       "@type": "Person",
       name: SITE_LEGAL_INFO.publicationDirector,

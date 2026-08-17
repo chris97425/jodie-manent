@@ -26,10 +26,9 @@ export function ConfidentialiteContent() {
             label="Adresse"
             value={SITE_LEGAL_INFO.registeredOffice}
           />
-          <LegalInfoRow label="Email" value={SITE_LEGAL_INFO.contactEmail} />
           <LegalInfoRow
-            label="Téléphone"
-            value={SITE_LEGAL_INFO.contactPhone}
+            label="Contact"
+            value="Uniquement via le formulaire de contact du site. Aucun e-mail n'est publié."
           />
         </dl>
       </LegalSection>
@@ -40,14 +39,24 @@ export function ConfidentialiteContent() {
         title={CONFIDENTIALITE_SECTIONS[1].label}
       >
         <p>
-          Via le formulaire de contact (actuellement en mode démo), les données
-          susceptibles d&apos;être collectées sont uniquement celles que vous
-          saisissez :
+          Via le formulaire de contact, les données susceptibles d&apos;être
+          collectées sont uniquement celles que vous saisissez :
         </p>
-        <LegalBulletList items={["Nom", "Adresse email", "Message"]} />
+        <LegalBulletList
+          items={[
+            "Nom",
+            "Entreprise (facultatif)",
+            "Adresse email",
+            "Téléphone (facultatif)",
+            "Type de besoin",
+            "Message",
+          ]}
+        />
         <p>
-          En mode démo, aucune donnée n&apos;est transmise à un serveur distant :
-          la validation et le message de succès sont simulés localement.
+          Lorsque le service d&apos;envoi n&apos;est pas encore configuré, la
+          demande est enregistrée localement (message de confirmation) sans
+          transmission à un serveur distant. Une fois configuré, l&apos;envoi
+          s&apos;effectue via un prestataire d&apos;e-mail tiers.
         </p>
       </LegalSection>
 
@@ -83,12 +92,10 @@ export function ConfidentialiteContent() {
         title={CONFIDENTIALITE_SECTIONS[4].label}
       >
         <p>
-          Destinataires : {SITE_LEGAL_INFO.brandName} uniquement. Aucune revente
-          de données. L&apos;hébergement du site statique est assuré par{" "}
-          {LEGAL_HOSTS.name} ({LEGAL_HOSTS.service}), situé aux États-Unis ;
-          le cas échéant, le transfert s&apos;appuie sur les mécanismes
-          applicables (clauses contractuelles types / cadre de protection des
-          données en vigueur).
+          Destinataires : {SITE_LEGAL_INFO.brandName} uniquement, et le cas
+          échéant le prestataire d&apos;envoi du formulaire. Aucune revente de
+          données. L&apos;hébergement du site statique est assuré par{" "}
+          {LEGAL_HOSTS.name} ({LEGAL_HOSTS.service}).
         </p>
       </LegalSection>
 
@@ -106,7 +113,7 @@ export function ConfidentialiteContent() {
           ]}
         />
         <p>
-          Pour les exercer : {SITE_LEGAL_INFO.contactEmail}. Vous pouvez
+          Pour les exercer, utilisez le formulaire de contact. Vous pouvez
           également introduire une réclamation auprès de la CNIL (
           <a
             href={SITE_LEGAL_INFO.cnilUrl}
@@ -137,9 +144,9 @@ export function ConfidentialiteContent() {
         title={CONFIDENTIALITE_SECTIONS[7].label}
       >
         <p>
-          Des mesures raisonnables seront mises en œuvre lors de
-          l&apos;activation d&apos;un envoi réel des messages. Le site est servi
-          en HTTPS via {LEGAL_HOSTS.service}.
+          Des mesures raisonnables sont mises en œuvre pour protéger les
+          messages transmis. Le site est servi en HTTPS via l&apos;hébergeur (
+          {LEGAL_HOSTS.name}).
         </p>
       </LegalSection>
 

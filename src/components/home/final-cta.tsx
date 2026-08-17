@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -8,7 +7,6 @@ import {
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { withBasePath } from "@/lib/assets";
 import { SOCIAL_LINKS } from "@/lib/site";
 
 const iconMap = {
@@ -20,44 +18,29 @@ const iconMap = {
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
-      <Image
-        src={withBasePath("/images/cta.png")}
-        alt=""
-        fill
-        className="object-cover object-center"
-        sizes="100vw"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-ink-900/55"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-r from-ink-900/70 via-ink-900/40 to-transparent"
-      />
-
-      <Container className="relative">
+    <section className="px-4 py-16 sm:px-6 sm:py-20">
+      <Container>
         <RevealOnScroll>
-          <div className="mx-auto max-w-2xl text-center text-cream-50">
+          <div className="rounded-[2.5rem] bg-coral-500 px-8 py-12 text-center text-night md:px-16 md:py-16">
             <p className="font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
-              Prêt·e à sortir du flou ?
+              Échangeons sur votre besoin
             </p>
-            <p className="mt-4 text-lg text-cream-100/95">
-              Parlons de votre transition et de vos talents — sans engagement,
-              sur devis.
+            <p className="mx-auto mt-4 max-w-xl text-lg text-night/80">
+              Un premier échange permet de comprendre votre contexte et
+              d&apos;imaginer l&apos;accompagnement le plus juste — sans
+              engagement.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button href="/contact/" variant="cream" size="lg">
-                Je prends RDV
+                Envoyer ma demande
               </Button>
               <Button
-                href="/offres/"
+                href="/faq/"
                 variant="ghost"
                 size="lg"
-                className="border border-cream-100/40 text-cream-50 hover:bg-white/10 hover:text-white"
+                className="border border-night/20 text-night hover:bg-night/5 hover:text-night"
               >
-                Voir les offres
+                Lire la FAQ
               </Button>
             </div>
             <ul className="mt-8 flex flex-wrap items-center justify-center gap-2">
@@ -71,7 +54,7 @@ export function FinalCta() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={link.label}
-                      className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-cream-100 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-100 active:bg-white/15"
+                      className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-night/80 transition-colors hover:bg-night/10 hover:text-night focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-night active:bg-night/15"
                     >
                       <Icon className="h-4 w-4" />
                     </a>

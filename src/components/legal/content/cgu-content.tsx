@@ -12,8 +12,7 @@ export function CguContent() {
           Les présentes Conditions Générales d&apos;Utilisation (CGU) définissent
           les conditions dans lesquelles tout visiteur peut accéder et utiliser
           le site vitrine {SITE_LEGAL_INFO.brandName} (
-          {SITE_LEGAL_INFO.websiteUrl} — nom de domaine à venir :{" "}
-          {SITE_LEGAL_INFO.websiteDisplay}).
+          {SITE_LEGAL_INFO.websiteUrl}).
         </p>
       </LegalSection>
 
@@ -37,10 +36,10 @@ export function CguContent() {
 
       <LegalSection id="liens" index={3} title={CGU_SECTIONS[3].label}>
         <p>
-          Le site peut renvoyer vers des plateformes tierces (LinkedIn,
-          Facebook, Instagram, Malt). {SITE_LEGAL_INFO.brandName} n&apos;est pas
-          responsable des contenus, pratiques ou disponibilités de ces
-          plateformes externes.
+          Le site peut renvoyer vers le profil LinkedIn de{" "}
+          {SITE_LEGAL_INFO.brandName}. {SITE_LEGAL_INFO.brandName} n&apos;est pas
+          responsable des contenus, pratiques ou disponibilités de cette
+          plateforme externe.
         </p>
       </LegalSection>
 

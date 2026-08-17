@@ -10,7 +10,7 @@ export const SITE_LEGAL_INFO = {
   companyLegalName: PLACEHOLDER,
   legalForm: PLACEHOLDER,
   registeredOffice: PLACEHOLDER,
-  registeredOfficeHint: "Sainte-Marie, La Réunion",
+  registeredOfficeHint: PLACEHOLDER,
   rcsNumber: PLACEHOLDER,
   sirenSiret: PLACEHOLDER,
   publicationDirector: "Jodie Manent",
@@ -18,19 +18,18 @@ export const SITE_LEGAL_INFO = {
   contactPhone: PLACEHOLDER,
   websiteUrl: SITE_URL,
   websiteDisplay: "jodiemanent.fr",
-  lastUpdated: "11 août 2026",
+  lastUpdated: "17 août 2026",
   cnilUrl: "https://www.cnil.fr",
   activity:
-    "Coach professionnelle certifiée (RNCP), spécialiste des Intelligences et Natures Multiples (INM)",
+    "Coach professionnelle certifiée (RNCP), formatrice et consultante, praticienne des Intelligences et Natures Multiples (IM/NM)",
 } as const;
 
 export const LEGAL_HOSTS = {
-  name: "GitHub, Inc.",
-  service: "GitHub Pages",
-  address: "88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis",
-  url: "https://pages.github.com",
-  description:
-    "GitHub, Inc. — 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — https://pages.github.com",
+  name: PLACEHOLDER,
+  service: PLACEHOLDER,
+  address: PLACEHOLDER,
+  url: PLACEHOLDER,
+  description: PLACEHOLDER,
 } as const;
 
 export const MENTIONS_LEGALES_SECTIONS: LegalSectionNav[] = [

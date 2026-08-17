@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ConfidentialiteContent } from "@/components/legal/content/confidentialite-content";
 import { LegalPageShell } from "@/components/legal";
 import { buildLegalWebPageJsonLd } from "@/lib/legal/json-ld";
@@ -6,19 +5,16 @@ import {
   CONFIDENTIALITE_SECTIONS,
   SITE_LEGAL_INFO,
 } from "@/lib/legal/site-legal-info";
+import { pageMetadata } from "@/lib/seo";
 
 const title = "Politique de confidentialité";
 const description = `Politique de confidentialité de ${SITE_LEGAL_INFO.brandName} — formulaire de contact, droits RGPD, cookies.`;
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title,
   description,
-  openGraph: {
-    title: `${title} · ${SITE_LEGAL_INFO.brandName}`,
-    description,
-    url: `${SITE_LEGAL_INFO.websiteUrl}/politique-de-confidentialite/`,
-  },
-};
+  path: "/politique-de-confidentialite/",
+});
 
 export default function PrivacyPage() {
   return (
