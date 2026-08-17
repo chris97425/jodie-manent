@@ -8,7 +8,7 @@ import { Container } from "@/components/ui/container";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contactez Jodie Manent pour un coaching, un bilan de compétences ou une formation — formulaire démo et liens réseaux.",
+    "Échangeons sur votre besoin. Un premier échange permet de comprendre votre contexte et d'imaginer l'accompagnement le plus juste.",
 };
 
 export default function ContactPage() {
@@ -16,8 +16,8 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Échangeons"
-        description="Décrivez votre besoin. Réponse sur devis — formulaire en mode démo pour cette vitrine."
+        title="Échangeons sur votre besoin."
+        description="Un premier échange permet de comprendre votre contexte et d'imaginer l'accompagnement le plus juste."
       />
       <section className="bg-white py-16 sm:py-20">
         <Container>

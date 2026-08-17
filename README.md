@@ -1,16 +1,18 @@
 # Jodie Manent — Site vitrine
 
-Site vitrine pour **Jodie Manent**, coach professionnelle certifiée (RNCP), spécialiste des **Intelligences et Natures Multiples (INM)** — Sainte-Marie, La Réunion.
+Site vitrine pour **Jodie Manent**, coach professionnelle certifiée (RNCP), formatrice et consultante — **Intelligences et Natures Multiples (IM/NM)** — La Réunion.
 
 ## Direction artistique
 
-- Palette : corail `#FF6B6B` (accents/CTA) · crème `#FFF9F2` / `#FFF5E6` · brun encre `#3B2A24` · footer anthracite `#2A201C`
-- Typo : **Manrope** (titres & corps) · **Parisienne** (accent script rare, écho du logo)
-- Export statique GitHub Pages
+- Palette : blanc cassé `#FAF7F2` · sable `#E5D9C5` · corail `#E8765B` (accent `#D95F44`) · brun chaud `#3E342E`
+- Typo : **Fraunces** (titres) · **Inter** (corps) · **Parisienne** (écho du logo, usage rare)
+- Photo hero : portrait sur banc corail, végétation tropicale
+- Logo : script corail sur fond transparent (header / footer)
 
 ## Stack
 
 - Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · GSAP (ScrollTrigger)
+- Zod (validation du formulaire de contact)
 - Lucide · Google Fonts
 
 ## Développement
@@ -24,6 +26,7 @@ Ouvrir [http://localhost:3000/jodie-manent/](http://localhost:3000/jodie-manent/
 
 ```bash
 npm run build
+npx tsc --noEmit
 npm run lint
 ```
 

@@ -5,7 +5,7 @@ import { PageHero } from "@/components/ui/page-hero";
 export const metadata: Metadata = {
   title: "Témoignages",
   description:
-    "Retours d'accompagnement autour de la clarté, de la confiance et du sens — sans témoignages inventés.",
+    "Espace réservé aux retours réels d'accompagnement — sans témoignages inventés.",
 };
 
 export default function TestimonialsPage() {
@@ -14,7 +14,7 @@ export default function TestimonialsPage() {
       <PageHero
         eyebrow="Témoignages"
         title="Des mots qui comptent"
-        description="Un espace pour les retours réels — aujourd'hui une citation vérifiée, demain d'autres voix."
+        description="Un espace pour les retours réels — les emplacements ci-dessous accueilleront les voix des personnes accompagnées."
       />
       <TestimonialsList />
     </>

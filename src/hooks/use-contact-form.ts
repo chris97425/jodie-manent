@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import {
+  EMPTY_CONTACT_FORM,
   sanitizeContactForm,
   validateContactForm,
   type ContactFormErrors,
@@ -11,14 +12,8 @@ import { createBrowserClient } from "@/lib/supabase/client";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-const initialValues: ContactFormValues = {
-  name: "",
-  email: "",
-  message: "",
-};
-
 export function useContactForm() {
-  const [values, setValues] = useState<ContactFormValues>(initialValues);
+  const [values, setValues] = useState<ContactFormValues>(EMPTY_CONTACT_FORM);
   const [errors, setErrors] = useState<ContactFormErrors>({});
   const [status, setStatus] = useState<Status>("idle");
   const [statusMessage, setStatusMessage] = useState("");
@@ -49,7 +44,6 @@ export function useContactForm() {
     const payload = sanitizeContactForm(values);
     const client = createBrowserClient();
 
-    // Tentative préparée Supabase — en démo, on simule toujours un succès local.
     await client.from("contact_messages").insert(payload);
     await new Promise((resolve) => setTimeout(resolve, 600));
 
@@ -57,7 +51,7 @@ export function useContactForm() {
     setStatusMessage(
       "Message enregistré en mode démo. Aucun envoi réel n'a été effectué.",
     );
-    setValues(initialValues);
+    setValues(EMPTY_CONTACT_FORM);
   }
 
   function resetStatus() {
