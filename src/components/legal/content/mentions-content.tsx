@@ -9,8 +9,11 @@ import {
   MENTIONS_LEGALES_SECTIONS,
   SITE_LEGAL_INFO,
 } from "@/lib/legal/site-legal-info";
+import { PLACEHOLDER } from "@/lib/site";
 
 export function MentionsContent() {
+  const hostUrlIsPlaceholder = LEGAL_HOSTS.url === PLACEHOLDER;
+
   return (
     <>
       <LegalSection
@@ -20,7 +23,7 @@ export function MentionsContent() {
       >
         <p>
           Le site vitrine {SITE_LEGAL_INFO.brandName} est édité par{" "}
-          {SITE_LEGAL_INFO.brandName}, {SITE_LEGAL_INFO.activity}.
+          {SITE_LEGAL_INFO.publicationDirector}, {SITE_LEGAL_INFO.activity}.
         </p>
         <dl>
           <LegalInfoRow
@@ -52,12 +55,20 @@ export function MentionsContent() {
             value={SITE_LEGAL_INFO.publicationDirector}
           />
           <LegalInfoRow
-            label="Email"
-            value={SITE_LEGAL_INFO.contactEmail}
-          />
-          <LegalInfoRow
-            label="Téléphone"
-            value={SITE_LEGAL_INFO.contactPhone}
+            label="Contact"
+            value={
+              <>
+                Uniquement via le{" "}
+                <Link
+                  href="/contact/"
+                  className="font-semibold text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+                >
+                  formulaire de contact
+                </Link>
+                . Aucun e-mail ni numéro de téléphone n&apos;est publié sur ce
+                site.
+              </>
+            }
           />
           <LegalInfoRow
             label="Site"
@@ -66,13 +77,9 @@ export function MentionsContent() {
                 href={SITE_LEGAL_INFO.websiteUrl}
                 className="text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
               >
-                {SITE_LEGAL_INFO.websiteUrl}
+                {SITE_LEGAL_INFO.websiteDisplay}
               </a>
             }
-          />
-          <LegalInfoRow
-            label="Nom de domaine à venir"
-            value={SITE_LEGAL_INFO.websiteDisplay}
           />
         </dl>
       </LegalSection>
@@ -83,8 +90,8 @@ export function MentionsContent() {
         title={MENTIONS_LEGALES_SECTIONS[1].label}
       >
         <p>
-          Le site est hébergé en tant que site statique via{" "}
-          <strong>{LEGAL_HOSTS.service}</strong>, sans serveur applicatif.
+          Hébergeur : {LEGAL_HOSTS.name}. Les coordonnées d&apos;hébergement
+          seront complétées à la mise en production.
         </p>
         <dl>
           <LegalInfoRow label="Hébergeur" value={LEGAL_HOSTS.name} />
@@ -92,14 +99,18 @@ export function MentionsContent() {
           <LegalInfoRow
             label="Site"
             value={
-              <a
-                href={LEGAL_HOSTS.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
-              >
-                {LEGAL_HOSTS.url}
-              </a>
+              hostUrlIsPlaceholder ? (
+                LEGAL_HOSTS.url
+              ) : (
+                <a
+                  href={LEGAL_HOSTS.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+                >
+                  {LEGAL_HOSTS.url}
+                </a>
+              )
             }
           />
         </dl>
@@ -112,9 +123,9 @@ export function MentionsContent() {
       >
         <p>
           Ce site présente les activités de coaching professionnel, de bilans de
-          compétences et de formations liées aux Intelligences et Natures
-          Multiples. Il s&apos;agit d&apos;un site vitrine informatif ; les
-          prestations sont proposées sur devis.
+          compétences, de formations, de conférences et d&apos;ateliers liés aux
+          Intelligences et Natures Multiples. Il s&apos;agit d&apos;un site
+          vitrine informatif ; les prestations sont proposées sur devis.
         </p>
       </LegalSection>
 
@@ -125,9 +136,10 @@ export function MentionsContent() {
       >
         <p>
           L&apos;ensemble des contenus du site (textes, éléments graphiques,
-          structure, logo « Jodie M. ») est protégé. Toute reproduction,
-          représentation ou exploitation, totale ou partielle, sans autorisation
-          préalable de {SITE_LEGAL_INFO.brandName} est interdite.
+          structure, logo « Jodie Manent — Révélatrice de vos talents ») est
+          protégé. Toute reproduction, représentation ou exploitation, totale ou
+          partielle, sans autorisation préalable de {SITE_LEGAL_INFO.brandName}{" "}
+          est interdite.
         </p>
       </LegalSection>
 
@@ -137,10 +149,9 @@ export function MentionsContent() {
         title={MENTIONS_LEGALES_SECTIONS[4].label}
       >
         <p>
-          Les informations sont fournies à titre indicatif. Le site est
-          actuellement en démonstration. Les éléments encore manquants (
-          {SITE_LEGAL_INFO.companyLegalName}) seront complétés à la mise en
-          production. {SITE_LEGAL_INFO.brandName} ne saurait être tenue
+          Les informations sont fournies à titre indicatif. Les éléments encore
+          manquants ({SITE_LEGAL_INFO.companyLegalName}) seront complétés à la
+          mise en production. {SITE_LEGAL_INFO.brandName} ne saurait être tenue
           responsable d&apos;une utilisation non conforme des informations
           publiées.
         </p>
@@ -169,9 +180,8 @@ export function MentionsContent() {
         title={MENTIONS_LEGALES_SECTIONS[6].label}
       >
         <p>
-          Site statique hébergé sur GitHub Pages : aucun cookie de suivi
-          publicitaire ou d&apos;analyse n&apos;est déposé par l&apos;éditeur à
-          ce jour.
+          Site vitrine statique : aucun cookie de suivi publicitaire ou
+          d&apos;analyse n&apos;est déposé par l&apos;éditeur à ce jour.
         </p>
       </LegalSection>
 
@@ -182,7 +192,8 @@ export function MentionsContent() {
       >
         <p>
           L&apos;accès au site s&apos;effectue via HTTPS. Les mesures de sécurité
-          relèvent notamment de l&apos;infrastructure de {LEGAL_HOSTS.name}.
+          relèvent notamment de l&apos;infrastructure de l&apos;hébergeur (
+          {LEGAL_HOSTS.name}).
         </p>
       </LegalSection>
 

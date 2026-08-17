@@ -102,7 +102,7 @@ export function CgvContent() {
       <LegalSection id="reclamations" index={8} title={CGV_SECTIONS[8].label}>
         <p>
           Toute réclamation doit d&apos;abord être adressée à{" "}
-          {SITE_LEGAL_INFO.brandName} ({SITE_LEGAL_INFO.contactEmail}). En cas
+          {SITE_LEGAL_INFO.brandName} via le formulaire de contact. En cas
           d&apos;échec de la résolution amiable, le client consommateur peut
           recourir à un médiateur de la consommation :{" "}
           <strong>[À COMPLÉTER]</strong>.
