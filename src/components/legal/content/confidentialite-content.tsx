@@ -119,7 +119,7 @@ export function ConfidentialiteContent() {
             href={SITE_LEGAL_INFO.cnilUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+            className="text-coral-800 underline-offset-2 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
           >
             cnil.fr
           </a>

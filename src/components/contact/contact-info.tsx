@@ -54,7 +54,7 @@ export function ContactInfo() {
             href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex gap-3 rounded-xl text-ink-700 transition-colors hover:text-coral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+            className="flex min-h-11 gap-3 rounded-xl text-ink-700 transition-colors hover:text-coral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
           >
             <LinkedInIcon className="mt-1 h-5 w-5 shrink-0 text-coral-600" />
             <div>

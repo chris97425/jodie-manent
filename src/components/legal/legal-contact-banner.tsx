@@ -23,7 +23,7 @@ export function LegalContactBanner() {
           </Button>
           <Link
             href="/politique-de-confidentialite/"
-            className="inline-flex min-h-11 items-center rounded-lg px-4 text-sm font-semibold text-ink-700 transition-colors hover:bg-cream-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:bg-white"
+            className="inline-flex min-h-11 items-center rounded-lg px-4 text-sm font-semibold text-ink-700 transition-colors hover:bg-cream-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 active:bg-white"
           >
             Voir la confidentialité
           </Link>

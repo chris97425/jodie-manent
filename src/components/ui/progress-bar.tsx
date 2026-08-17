@@ -11,7 +11,7 @@ export function ProgressBar({ value, max, label }: ProgressBarProps) {
     <div>
       <div className="mb-2 flex items-center justify-between gap-3 text-sm">
         <span className="font-medium text-ink-600">{label}</span>
-        <span className="tabular-nums text-ink-400">
+        <span className="tabular-nums text-ink-500">
           {value}/{max}
         </span>
       </div>

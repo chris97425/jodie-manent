@@ -37,7 +37,7 @@ export function AccompanimentQuiz() {
 
   return (
     <Card className="overflow-hidden p-0">
-      <div className="border-b border-cream-200 bg-cream-50 px-6 py-5 sm:px-8">
+      <div className="border-b border-cream-200 bg-cream-50 px-4 py-5 sm:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-coral-800">
           Quiz
         </p>
@@ -61,7 +61,7 @@ export function AccompanimentQuiz() {
         </div>
       </div>
 
-      <div className="px-6 py-7 sm:px-8 sm:py-8">
+      <div className="px-4 py-7 sm:px-8 sm:py-8">
         {!finished && current ? (
           <QuizStep
             prompt={current.prompt}
@@ -83,11 +83,11 @@ export function AccompanimentQuiz() {
             <p className="mt-3 max-w-xl text-base leading-relaxed text-ink-500">
               {result.summary}
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button href="/contact/" size="lg">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Button href="/contact/" size="lg" className="w-full sm:w-auto">
                 Échangeons sur votre besoin
               </Button>
-              <Button href={result.href} variant="secondary">
+              <Button href={result.href} variant="secondary" className="w-full sm:w-auto">
                 Voir cette offre
               </Button>
               <Button
@@ -95,6 +95,7 @@ export function AccompanimentQuiz() {
                 variant="ghost"
                 onClick={restart}
                 aria-label="Rejouer le quiz"
+                className="w-full sm:w-auto"
               >
                 <RotateCcw aria-hidden="true" className="h-4 w-4" />
                 Rejouer

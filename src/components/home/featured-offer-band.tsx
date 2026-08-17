@@ -9,7 +9,7 @@ export function FeaturedOfferBand() {
     <section className="px-4 py-16 sm:px-6 sm:py-20">
       <Container>
         <RevealOnScroll>
-          <div className="rounded-[2.5rem] bg-ink-800 px-8 py-12 text-cream-50 md:px-16 md:py-20">
+          <div className="rounded-[2.5rem] bg-ink-800 px-6 py-12 text-cream-50 sm:px-8 md:px-16 md:py-20">
             <p className="text-xs font-bold uppercase tracking-widest text-coral-400">
               {FEATURED_OFFER.eyebrow}
             </p>
@@ -20,10 +20,10 @@ export function FeaturedOfferBand() {
               </span>
               .
             </h2>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-cream-100/80">
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-cream-100">
               {FEATURED_OFFER.description}
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <Button href="/contact/" size="lg">
                 Construire une intervention sur mesure
                 <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
@@ -32,7 +32,7 @@ export function FeaturedOfferBand() {
                 href={FEATURED_OFFER.href}
                 variant="ghost"
                 size="lg"
-                className="border border-cream-100/20 text-cream-50 hover:bg-white/10 hover:text-white"
+                className="border border-cream-100/40 text-cream-50 hover:bg-white/10 hover:text-white focus-visible:ring-offset-ink-800"
               >
                 En savoir plus
               </Button>

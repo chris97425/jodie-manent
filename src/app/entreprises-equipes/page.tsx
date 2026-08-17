@@ -71,7 +71,7 @@ export default function EntreprisesPage() {
               </div>
             </RevealOnScroll>
             <RevealOnScroll delay={0.08}>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-coral-600">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-coral-800">
                 {ENTREPRISES_FEATURED.kind} — {ENTREPRISES_FEATURED.subtitle}
               </p>
               <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink-700 sm:text-4xl">
@@ -80,7 +80,7 @@ export default function EntreprisesPage() {
               <p className="mt-5 text-lg leading-relaxed text-ink-500">
                 {ENTREPRISES_FEATURED.text}
               </p>
-              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-ink-400">
+              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-ink-600">
                 Objectifs
               </p>
               <ul className="mt-3 space-y-2">
@@ -119,14 +119,14 @@ export default function EntreprisesPage() {
                 id={offer.id}
                 className="scroll-mt-28 rounded-3xl border border-cream-200 bg-white p-6 sm:p-8"
               >
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-coral-600">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-coral-800">
                   {offer.kind}
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight text-ink-700">
                   {offer.title}
                 </h3>
                 <p className="mt-2 text-base text-ink-500">{offer.subtitle}</p>
-                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-ink-400">
+                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-ink-600">
                   Objectifs
                 </p>
                 <ul className="mt-3 grid gap-2 sm:grid-cols-2">
@@ -153,13 +153,13 @@ export default function EntreprisesPage() {
             <h3 className="font-display text-xl font-semibold text-ink-700">
               Exemples d&apos;ateliers
             </h3>
-            <ol className="mt-5 grid gap-4 sm:grid-cols-3">
+            <ol className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {ATELIER_EXAMPLES.map((example, index) => (
                 <li
                   key={example}
                   className="rounded-2xl border border-cream-200 bg-white p-5"
                 >
-                  <span className="font-mono text-xs text-ink-300">
+                  <span className="font-mono text-xs text-ink-500">
                     0{index + 1}
                   </span>
                   <p className="mt-2 text-sm leading-relaxed text-ink-600">

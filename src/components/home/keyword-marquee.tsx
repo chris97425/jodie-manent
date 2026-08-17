@@ -34,7 +34,7 @@ export function KeywordMarquee() {
   return (
     <section
       aria-label="Mots-clés"
-      className="overflow-hidden border-y border-cream-200 bg-cream-50 py-4"
+      className="overflow-x-hidden border-y border-cream-200 bg-cream-50 py-4"
     >
       <div ref={rootRef} className="relative">
         {reduced ? (

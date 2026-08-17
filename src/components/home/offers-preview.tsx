@@ -31,7 +31,7 @@ export function OffersPreview() {
                   <li>
                     <Link
                       href={item.href}
-                      className="group flex items-start gap-6 border-b border-ink-700/10 py-7 transition-[padding] hover:pl-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+                      className="group flex min-h-11 items-start gap-3 border-b border-ink-700/10 py-7 sm:gap-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
                     >
                       <Icon
                         aria-hidden="true"
@@ -45,7 +45,7 @@ export function OffersPreview() {
                           {item.description}
                         </p>
                       </div>
-                      <span className="mt-2 font-mono text-xs text-ink-300">
+                      <span className="mt-2 font-mono text-xs text-ink-500">
                         0{index + 1}
                       </span>
                     </Link>

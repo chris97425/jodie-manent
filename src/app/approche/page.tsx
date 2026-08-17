@@ -44,7 +44,7 @@ export default function ApprochePage() {
           {APPROCHE_PILLARS.map((pillar, index) => (
             <RevealOnScroll key={pillar.id} delay={index * 0.06}>
               <article className="rounded-3xl border border-cream-200 bg-cream-50 p-8">
-                <p className="font-display text-5xl font-semibold text-coral-600">
+                <p className="font-display text-5xl font-semibold text-coral-700">
                   {pillar.count}
                 </p>
                 <h2 className="mt-3 font-display text-2xl font-semibold text-ink-700">

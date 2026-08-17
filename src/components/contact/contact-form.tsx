@@ -6,7 +6,7 @@ import { useContactForm } from "@/hooks/use-contact-form";
 import type { ContactFormValues } from "@/lib/validation";
 
 const fieldClasses =
-  "mt-2 w-full rounded-xl border border-cream-200 bg-white px-4 py-3 text-base text-ink-700 shadow-sm transition-[border-color,box-shadow] duration-200 placeholder:text-ink-400 hover:border-coral-300 focus:border-coral-500 focus:outline-none focus:ring-2 focus:ring-coral-500/25 disabled:cursor-not-allowed disabled:bg-cream-50 disabled:opacity-60";
+  "mt-2 min-h-11 w-full rounded-xl border border-cream-200 bg-white px-4 py-3 text-base text-ink-700 shadow-sm transition-[border-color,box-shadow] duration-200 placeholder:text-ink-400 hover:border-coral-300 focus:border-coral-700 focus:outline-none focus:ring-2 focus:ring-coral-800/30 disabled:cursor-not-allowed disabled:bg-cream-50 disabled:opacity-60";
 
 export function ContactForm() {
   const {
@@ -207,7 +207,7 @@ export function ContactForm() {
             <button
               type="button"
               onClick={resetStatus}
-              className="mt-2 inline-flex min-h-11 items-center text-sm font-semibold text-emerald-900 underline-offset-2 transition hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+              className="mt-2 inline-flex min-h-11 items-center text-sm font-semibold text-emerald-900 underline-offset-2 transition hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
             >
               Envoyer un autre message
             </button>

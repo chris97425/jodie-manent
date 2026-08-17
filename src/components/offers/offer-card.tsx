@@ -33,7 +33,7 @@ export function OfferCard({ offer }: OfferCardProps) {
           />
           <span>Présentiel / distanciel selon les besoins.</span>
         </p>
-        <p className="text-base font-semibold text-coral-600">{offer.pricing}</p>
+        <p className="text-base font-semibold text-coral-800">{offer.pricing}</p>
       </div>
       <div className="mt-6">
         <Button href={offer.href} variant="secondary">

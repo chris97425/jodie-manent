@@ -31,7 +31,7 @@ export function MethodPath() {
           {METHOD_STEPS.map((step, index) => (
             <RevealOnScroll key={step.id} delay={index * 0.07}>
               <li className="flex gap-4 rounded-2xl border border-cream-200 bg-white p-5 shadow-sm">
-                <span className="text-sm font-bold tabular-nums text-coral-500">
+                <span className="text-sm font-bold tabular-nums text-coral-800">
                   {step.number}
                 </span>
                 <div>

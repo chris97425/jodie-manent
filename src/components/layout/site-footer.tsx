@@ -22,7 +22,7 @@ export function SiteFooter() {
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="inline-flex items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400"
+              className="inline-flex min-h-11 items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-400"
               aria-label={`${SITE_NAME} — Accueil`}
             >
               <BrandLogo
@@ -32,12 +32,12 @@ export function SiteFooter() {
                 className="h-16 w-16 rounded-xl"
               />
             </Link>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream-100/85">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream-100">
               Coach professionnelle certifiée, formatrice et consultante.
               Accompagnement des personnes, managers et équipes pour révéler
               les potentiels et renforcer la coopération.
             </p>
-            <p className="mt-4 flex items-center gap-3 text-sm text-cream-100/85">
+            <p className="mt-4 flex items-center gap-3 text-sm text-cream-100">
               <MapPin
                 aria-hidden="true"
                 className="h-4 w-4 shrink-0 text-coral-400"
@@ -92,7 +92,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-cream-100/80 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-cream-100 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {SITE_NAME} — La Réunion
           </p>

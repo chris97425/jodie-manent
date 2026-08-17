@@ -14,7 +14,7 @@ export function LegalHeader({ badge, title, description }: LegalHeaderProps) {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ink-600 transition-colors hover:text-coral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:text-coral-900"
+          className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ink-600 transition-colors hover:text-coral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 active:text-coral-900"
         >
           <ArrowLeft aria-hidden="true" className="h-4 w-4" />
           Retour à l&apos;accueil
@@ -28,7 +28,7 @@ export function LegalHeader({ badge, title, description }: LegalHeaderProps) {
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-500">
           {description}
         </p>
-        <p className="mt-4 text-sm text-ink-400">
+        <p className="mt-4 text-sm text-ink-500">
           Dernière mise à jour : {SITE_LEGAL_INFO.lastUpdated}
         </p>
       </div>

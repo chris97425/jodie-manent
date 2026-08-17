@@ -10,14 +10,14 @@ export function ConvictionBand() {
           <div className="mx-auto max-w-4xl text-center">
             <p className="font-display text-2xl leading-[1.2] text-ink-700 sm:text-4xl">
               « Je crois que les personnes progressent davantage lorsqu&apos;elles
-              <span className="italic text-coral-600">
+              <span className="italic text-coral-700">
                 {" "}
                 comprennent leurs ressources
               </span>
               , se sentent légitimes et trouvent un environnement qui leur
               permet d&apos;exprimer leur potentiel. »
             </p>
-            <p className="mt-8 text-sm uppercase tracking-widest text-ink-400">
+            <p className="mt-8 text-sm uppercase tracking-widest text-ink-500">
               — Ma conviction
             </p>
             <p className="sr-only">{HOME_CONVICTION}</p>

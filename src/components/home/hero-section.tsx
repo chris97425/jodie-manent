@@ -80,17 +80,17 @@ export function HeroSection() {
       ref={rootRef}
       className="relative overflow-hidden bg-cream-50 pt-20"
     >
-      <Container className="relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:gap-16 lg:py-24">
+      <Container className="relative grid items-center gap-10 py-16 sm:gap-12 lg:grid-cols-2 lg:gap-16 lg:py-24">
         <div>
           <p
             data-hero="eyebrow"
-            className="text-xs font-bold uppercase tracking-[0.2em] text-coral-600"
+            className="text-xs font-bold uppercase tracking-[0.2em] text-coral-800"
           >
             {SITE_ROLE}
           </p>
           <h1
             data-hero="headline"
-            className="mt-6 max-w-xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-ink-700 sm:text-5xl lg:text-6xl"
+            className="mt-6 max-w-xl break-words font-display text-4xl font-semibold leading-[1.08] tracking-tight text-ink-700 sm:text-5xl lg:text-6xl"
           >
             {SITE_HERO}
           </h1>
@@ -100,7 +100,7 @@ export function HeroSection() {
           >
             {SITE_DESCRIPTION}
           </p>
-          <div data-hero="cta" className="mt-10 flex flex-wrap gap-4">
+          <div data-hero="cta" className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
             <Button href="/contact/" size="lg">
               Échangeons sur votre besoin
               <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
@@ -111,7 +111,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div data-hero="visual" className="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div data-hero="visual" className="relative mx-auto w-full max-w-md pb-4 md:pb-10 lg:max-w-none">
           <PortraitCard
             src={IMAGES.hero}
             alt="Jodie Manent, coach professionnelle, assise sur un banc corail entourée de végétation tropicale"
@@ -121,7 +121,7 @@ export function HeroSection() {
             className="aspect-[4/5]"
             imageClassName="object-[center_20%]"
           />
-          <div className="absolute -bottom-6 -left-2 hidden max-w-xs rounded-2xl bg-white p-6 shadow-lg md:block lg:-left-6">
+          <div className="absolute bottom-8 left-4 right-4 hidden max-w-xs rounded-2xl bg-white p-5 shadow-lg md:block md:right-auto lg:bottom-4 lg:left-4">
             <p className="font-display text-lg italic leading-snug text-ink-700">
               « {HOME_QUOTE} »
             </p>
