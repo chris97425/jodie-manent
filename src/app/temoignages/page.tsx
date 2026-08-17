@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { TestimonialsList } from "@/components/testimonials/testimonials-list";
 import { PageHero } from "@/components/ui/page-hero";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Témoignages",
   description:
-    "Espace réservé aux retours réels d'accompagnement — sans témoignages inventés.",
-};
+    "Retours anonymes d'accompagnements : bilan de compétences, coaching individuel, formation et découverte des Intelligences et Natures Multiples.",
+  path: "/temoignages/",
+});
 
 export default function TestimonialsPage() {
   return (
@@ -14,7 +15,7 @@ export default function TestimonialsPage() {
       <PageHero
         eyebrow="Témoignages"
         title="Des mots qui comptent"
-        description="Un espace pour les retours réels — les emplacements ci-dessous accueilleront les voix des personnes accompagnées."
+        description="Des retours réels et anonymes — sans prénom ni nom, uniquement la prestation concernée."
       />
       <TestimonialsList />
     </>
