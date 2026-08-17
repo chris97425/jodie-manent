@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { OffersGrid } from "@/components/offers/offers-grid";
 import { PageHero } from "@/components/ui/page-hero";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Accompagnements",
   description:
-    "Formation, bilans de compétences et coaching professionnel, conférences et ateliers — accompagnements sur devis, à La Réunion, dans l'océan Indien et à distance.",
-};
+    "Formation, bilans de compétences, coaching professionnel, conférences et ateliers — accompagnements sur devis à La Réunion, dans l'océan Indien et à distance.",
+  path: "/offres/",
+});
 
 export default function OffersPage() {
   return (

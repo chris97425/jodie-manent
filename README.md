@@ -2,12 +2,16 @@
 
 Site vitrine pour **Jodie Manent**, coach professionnelle certifiée (RNCP), formatrice et consultante — **Intelligences et Natures Multiples (IM/NM)** — La Réunion.
 
-## Direction artistique
+Canonical / domaine cible : [https://jodiemanent.fr](https://jodiemanent.fr)
 
-- Palette : blanc cassé `#FAF7F2` · sable `#E5D9C5` · corail `#E8765B` (accent `#D95F44`) · brun chaud `#3E342E`
-- Typo : **Fraunces** (titres) · **Inter** (corps) · **Parisienne** (écho du logo, usage rare)
-- Photo hero : portrait sur banc corail, végétation tropicale
-- Logo : script corail sur fond transparent (header / footer)
+## Direction artistique (charte officielle)
+
+- **Corail** `#ff6861` — CTA, accents, liens
+- **Blanc cassé** `#fff9ef` — fond principal
+- **Bleu nuit** `#02142f` — textes et accents sombres
+- Typo : **Fraunces** (titres) · **Inter** (corps)
+- Photo hero : `public/images/jodie-photo-hero.jpg` (banc orange, végétation tropicale)
+- Logos : `public/logos/` et `src/assets/logos/` (saumon sur fond transparent, blanc sur saumon)
 
 ## Stack
 
@@ -22,7 +26,7 @@ npm install
 npm run dev
 ```
 
-Ouvrir [http://localhost:3000/jodie-manent/](http://localhost:3000/jodie-manent/) (`basePath` actif).
+Ouvrir [http://localhost:3000/jodie-manent/](http://localhost:3000/jodie-manent/) (`basePath` actif pour GitHub Pages).
 
 ```bash
 npm run build
@@ -34,7 +38,26 @@ npm run lint
 
 - `output: 'export'`, `basePath: '/jodie-manent'`, `assetPrefix: '/jodie-manent/'`
 - Workflow : `.github/workflows/deploy.yml`
-- URL : https://chris97425.github.io/jodie-manent/
+- Prévisualisation GitHub Pages : https://chris97425.github.io/jodie-manent/
+- Production visée : **https://jodiemanent.fr** (canonical, Open Graph, sitemap, robots)
+
+## Préparation du formulaire de contact
+
+Le formulaire est le **seul canal d’écriture** : l’adresse e-mail de destination n’apparaît nulle part sur le site (ni texte, ni `mailto`, ni métadonnées).
+
+1. Créer un endpoint chez un prestataire (Formspree, Web3Forms, Resend, etc.).
+2. Configurer la destination **côté prestataire uniquement** : `jodiemanent@gmail.com`.
+3. Renseigner `.env.local` à partir de `.env.example` :
+
+```bash
+NEXT_PUBLIC_CONTACT_ENDPOINT=[À CONFIGURER]
+NEXT_PUBLIC_CONTACT_ACCESS_KEY=
+```
+
+- `NEXT_PUBLIC_CONTACT_ENDPOINT` : URL d’envoi (ex. `https://formspree.io/f/xxxx` ou `https://api.web3forms.com/submit`).
+- `NEXT_PUBLIC_CONTACT_ACCESS_KEY` : clé d’accès si le service l’exige (Web3Forms). Laisser vide sinon.
+
+Si l’endpoint n’est pas configuré, l’envoi reste gracieux : message « Merci, votre demande a bien été enregistrée. » et journalisation locale **sans** recopier le message ni l’e-mail du visiteur.
 
 ## Préparation Supabase (non branché)
 
