@@ -6,7 +6,7 @@ import { useGsapContext } from "@/hooks/use-gsap-context";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 
 const WORDS =
-  "Talents · Intelligences multiples · Transitions · Bilans · Formations · Coaching · ";
+  "Potentiels · Coopération · Intelligences multiples · Posture managériale · Transitions · Bilans · Formations · Coaching · ";
 
 export function KeywordMarquee() {
   const rootRef = useRef<HTMLDivElement>(null);

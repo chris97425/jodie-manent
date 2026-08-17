@@ -1,10 +1,9 @@
 import { AudienceProfiles } from "@/components/home/audience-profiles";
+import { ConvictionBand } from "@/components/home/conviction-band";
 import { FaqSection } from "@/components/home/faq-section";
+import { FeaturedOfferBand } from "@/components/home/featured-offer-band";
 import { FinalCta } from "@/components/home/final-cta";
 import { HeroSection } from "@/components/home/hero-section";
-import { InterventionsBand } from "@/components/home/interventions-band";
-import { KeywordMarquee } from "@/components/home/keyword-marquee";
-import { MethodPath } from "@/components/home/method-path";
 import { OffersPreview } from "@/components/home/offers-preview";
 import { QuizSection } from "@/components/home/quiz-section";
 import { SocialProof } from "@/components/home/social-proof";
@@ -15,13 +14,12 @@ export default function HomePage() {
     <>
       <HeroSection />
       <TrustBand />
-      <OffersPreview />
-      <KeywordMarquee />
-      <MethodPath />
       <AudienceProfiles />
-      <QuizSection />
-      <InterventionsBand />
+      <OffersPreview />
       <SocialProof />
+      <FeaturedOfferBand />
+      <ConvictionBand />
+      <QuizSection />
       <FaqSection />
       <FinalCta />
     </>

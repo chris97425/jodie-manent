@@ -85,7 +85,7 @@ export function AccompanimentQuiz() {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button href="/contact/" size="lg">
-                Je prends RDV
+                Échangeons sur votre besoin
               </Button>
               <Button href={result.href} variant="secondary">
                 Voir cette offre
