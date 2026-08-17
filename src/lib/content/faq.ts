@@ -9,13 +9,13 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: "deroulement-bilan",
     question: "Comment se déroule un bilan de compétences ?",
     answer:
-      "Après un premier échange pour clarifier votre situation, nous choisissons ensemble le format (Essentiel 13 h, Medium 16 h ou Approfondi 20 h). Le parcours combine des séances d'accompagnement, un travail de connaissance de soi — notamment via les Intelligences et Natures Multiples — et un plan d'action concret. Les modalités précises se précisent avant tout engagement.",
+      "Après un premier échange pour clarifier votre situation, nous choisissons ensemble le format le plus juste : Essentiel (13 h), Medium (16 h) ou Approfondi (20 h). Le parcours combine des séances d'accompagnement, un travail de connaissance de soi — notamment via les Intelligences et Natures Multiples — et un plan d'action concret. Les modalités précises se précisent avant tout engagement.",
   },
   {
     id: "financement",
-    question: "Le bilan est-il finançable (OPCO / CPF) ?",
+    question: "Les formations et bilans sont-ils finançables (OPCO, CPF) ?",
     answer:
-      "Des dispositifs OPCO et CPF peuvent s'appliquer selon votre situation. Les conditions exactes se confirment lors du premier échange : [À COMPLÉTER].",
+      "Oui, selon votre situation. Un bilan de compétences peut notamment être financé via le CPF. Les formations destinées aux entreprises et aux équipes peuvent s'inscrire dans des dispositifs OPCO. Les conditions exactes se confirment lors du premier échange, en fonction de votre statut et de l'organisme financeur.",
   },
   {
     id: "distance",
@@ -31,14 +31,8 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     id: "nombre-seances",
-    question: "Combien de séances faut-il prévoir ?",
+    question: "Combien de séances pour un coaching professionnel ?",
     answer:
-      "Un coaching se construit généralement sur plusieurs séances réparties dans le temps, selon l'objectif défini ensemble. Le bilan de compétences existe en trois formats : 13 h, 16 h ou 20 h. Le nombre exact de séances se précise lors du premier échange.",
-  },
-  {
-    id: "premier-echange",
-    question: "Comment se déroule un premier échange ?",
-    answer:
-      "C'est un temps sans engagement, pour comprendre votre contexte, vos enjeux et vérifier ensemble que l'accompagnement envisagé est le plus juste. Utilisez le formulaire de contact pour convenir d'un rendez-vous.",
+      "Un coaching se construit sur plusieurs séances, réparties dans le temps, selon l'objectif défini ensemble. Le rythme et le nombre de rendez-vous se précisent lors du premier échange — sans grille unique imposée à l'avance.",
   },
 ];

@@ -2,7 +2,7 @@ export const APPROCHE_INTRO =
   "Une approche pour mieux comprendre ses préférences, ses capacités naturelles, ses sources de motivation — et sa manière de fonctionner avec les autres.";
 
 export const APPROCHE_ORIGIN =
-  "L'approche des Intelligences et Natures Multiples est issue des travaux du psychologue américain Howard Gardner, enrichie par le pédagogue Steven Rudolph. Elle part du constat qu'il existe en chacun de nous des capacités et des motivations naturelles, présentes à des degrés différents.";
+  "L'approche des Intelligences et Natures Multiples est issue des travaux du psychologue américain Howard Gardner, enrichie par le pédagogue Steven Rudolph. Elle part du constat qu'il existe en chacun de nous des capacités et des motivations naturelles, présentes à des degrés différents. Nous possédons toutes ces Intelligences et Natures, à des degrés différents.";
 
 export const APPROCHE_PILLARS = [
   {
@@ -20,30 +20,23 @@ export const APPROCHE_PILLARS = [
 ] as const;
 
 export const APPROCHE_ZONE_DE_GENIE =
-  "Les identifier, c'est comprendre son mode de fonctionnement naturel et sa zone de génie : là où l'on se sent à la fois compétent et motivé. Ce n'est pas un outil qui enferme dans une étiquette ou un profil figé, mais une grille de lecture vivante pour mieux se connaître et mieux coopérer.";
+  "Les identifier, c'est comprendre son mode de fonctionnement naturel et sa zone de génie : là où l'on se sent à la fois compétent et motivé.";
 
 export const APPROCHE_AUDIENCES = [
   {
     id: "personnes",
-    title: "Les personnes",
+    title: "Pour les individus",
     text: "Mieux se connaître, identifier ses talents, retrouver confiance et clarifier son avenir professionnel.",
   },
   {
-    id: "managers",
-    title: "Les managers",
-    text: "Comprendre ce qui met chacun en mouvement, adapter sa communication et sa posture managériale.",
-  },
-  {
-    id: "equipes",
-    title: "Les équipes",
-    text: "Valoriser les complémentarités, désamorcer les incompréhensions et renforcer la cohésion.",
-  },
-  {
-    id: "parcours",
-    title: "Les parcours professionnels",
-    text: "Orientation, reconversion, insertion, mobilité interne : donner du sens et des repères concrets.",
+    id: "entreprises",
+    title: "Pour les entreprises",
+    text: "Une nouvelle grille de lecture pour comprendre ce qui met les collaborateurs en mouvement, renforcer la cohésion, accompagner les transformations — un levier pour l'engagement, la fidélisation et la mobilité interne.",
   },
 ] as const;
+
+export const APPROCHE_NOT_A_LABEL =
+  "Ce n'est pas un outil qui enferme dans une étiquette ou un profil figé. C'est une grille de lecture pour mieux se connaître et mieux coopérer.";
 
 export const APPROCHE_QUALITIES = [
   {
@@ -68,6 +61,8 @@ export const APPROCHE_ENTREPRISE = [
   "Valoriser la diversité des profils",
   "Renforcer la coopération et la cohésion",
   "Soutenir la mobilité interne et la conduite du changement",
+  "Accompagner les transformations avec une grille de lecture positive",
+  "Soutenir l'engagement et la fidélisation",
 ] as const;
 
 export const APPROCHE_CLOSING =

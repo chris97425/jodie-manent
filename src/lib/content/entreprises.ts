@@ -14,21 +14,22 @@ export type CollectiveOffer = {
 export const ENTREPRISES_INTRO =
   "Pour les services RH, DRH et RRH, les managers, les équipes, les organismes de formation, écoles, CFA et associations — des interventions construites avec vous, ancrées dans vos enjeux réels.";
 
+export const ENTREPRISES_FEATURED = {
+  kind: "Formation" as const,
+  title:
+    "Développer sa posture managériale grâce aux Intelligences et Natures Multiples",
+  subtitle: "Formation de 3 jours — offre prioritaire",
+  text: "Cette formation aide les managers à mieux comprendre leur fonctionnement, leurs zones de confort, leurs ressources naturelles et celles de leurs collaborateurs, afin d'adapter leur communication et leur management.",
+  objectives: [
+    "Mieux se connaître en tant que manager",
+    "Identifier ses réflexes et préférences managériales",
+    "Comprendre les profils, talents et motivations de ses collaborateurs",
+    "Adapter sa communication et sa posture",
+    "Renforcer l'engagement, l'autonomie et la coopération",
+  ],
+} as const;
+
 export const ENTREPRISES_OFFERS: CollectiveOffer[] = [
-  {
-    id: "management",
-    kind: "Formation",
-    title:
-      "Les Intelligences et Natures Multiples au service du management",
-    subtitle: "Développer sa posture managériale — offre prioritaire, 3 jours",
-    objectives: [
-      "Mieux se connaître en tant que manager",
-      "Identifier ses réflexes et préférences managériales",
-      "Comprendre les profils, talents et motivations de ses collaborateurs",
-      "Adapter sa communication et sa posture",
-      "Renforcer l'engagement, l'autonomie et la coopération",
-    ],
-  },
   {
     id: "collectifs",
     kind: "Formation",
@@ -64,12 +65,12 @@ export const ATELIER_EXAMPLES = [
 ] as const;
 
 export const ENTREPRISES_COACHING = {
-  title: "Coaching professionnel des managers et collaborateurs",
-  text: "Un accompagnement individuel pour faire évoluer une situation professionnelle et atteindre un objectif concret. J'accompagne managers et collaborateurs sur plusieurs séances afin de prendre du recul, mieux comprendre leur fonctionnement, identifier leurs leviers d'action et mettre en œuvre des changements adaptés à leur réalité professionnelle.",
+  title: "Coachings professionnels (managers et collaborateurs)",
+  text: "Un accompagnement individuel pour faire évoluer une situation professionnelle et atteindre un objectif concret. Plusieurs séances pour prendre du recul, mieux comprendre son fonctionnement, identifier ses leviers d'action et mettre en œuvre des changements adaptés.",
 } as const;
 
 export const ENTREPRISES_CONFERENCES = {
-  title: "Conférences sur les Intelligences et Natures Multiples",
+  title: "Conférences de sensibilisation sur les Intelligences et Natures Multiples",
   text: "Un format court et fédérateur pour faire découvrir l'approche à un large public : comprendre ce qui met chacun en mouvement, révéler les talents présents dans l'organisation et ouvrir un dialogue nouveau sur la coopération.",
 } as const;
 

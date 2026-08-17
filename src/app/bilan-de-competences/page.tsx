@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import { FinalCta } from "@/components/home/final-cta";
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
+import { TestimonialsBlock } from "@/components/testimonials/testimonials-block";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PageHero } from "@/components/ui/page-hero";
@@ -12,13 +12,16 @@ import {
   BILAN_INTRO,
   BILAN_OBJECTIVES,
 } from "@/lib/content/bilan";
+import { BILAN_TESTIMONIALS } from "@/lib/content/testimonials";
 import { cx } from "@/lib/cx";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Bilan de compétences",
   description:
-    "Bilan de compétences en 3 formats (13 h, 16 h, 20 h) et coaching professionnel : faire le point, clarifier une direction, valider un projet et passer à l'action.",
-};
+    "Bilan de compétences à La Réunion : 13 h, 16 h ou 20 h. Faire le point, clarifier une direction, valider un projet et passer à l'action — financement CPF possible.",
+  path: "/bilan-de-competences/",
+});
 
 export default function BilanPage() {
   return (
@@ -29,10 +32,7 @@ export default function BilanPage() {
         description={BILAN_INTRO}
       />
 
-      <Section
-        className="bg-white"
-        title="Quatre objectifs possibles"
-      >
+      <Section className="bg-white" title="Quatre objectifs possibles">
         <div className="grid gap-5 sm:grid-cols-2">
           {BILAN_OBJECTIVES.map((objective, index) => (
             <RevealOnScroll key={objective.id} delay={index * 0.05}>
@@ -74,7 +74,7 @@ export default function BilanPage() {
                 <h3 className="mt-2 font-display text-2xl font-semibold text-ink-700">
                   {format.title}
                 </h3>
-                <p className="mt-2 text-lg font-semibold text-coral-600">
+                <p className="mt-2 text-lg font-semibold text-coral-700">
                   {format.hours}
                 </p>
                 <p className="mt-3 flex-1 text-base leading-relaxed text-ink-500">
@@ -106,6 +106,13 @@ export default function BilanPage() {
           Échangeons sur votre besoin
         </Button>
       </Section>
+
+      <TestimonialsBlock
+        items={BILAN_TESTIMONIALS}
+        eyebrow="Témoignages"
+        title="Retours sur le bilan de compétences"
+        className="bg-cream-50"
+      />
 
       <FinalCta />
     </>

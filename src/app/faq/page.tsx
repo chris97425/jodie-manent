@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import { FinalCta } from "@/components/home/final-cta";
 import { Accordion } from "@/components/ui/accordion";
 import { PageHero } from "@/components/ui/page-hero";
 import { Section } from "@/components/ui/section";
 import { FAQ_ITEMS } from "@/lib/content/faq";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "FAQ",
   description:
-    "Réponses aux questions fréquentes : déroulement d'un bilan, financement OPCO/CPF, interventions à distance, différence coaching/formation, nombre de séances.",
-};
+    "Bilan de compétences, financement OPCO et CPF, coaching, formation et interventions à distance à La Réunion — réponses aux questions fréquentes.",
+  path: "/faq/",
+});
 
 export default function FaqPage() {
   return (
@@ -17,7 +18,7 @@ export default function FaqPage() {
       <PageHero
         eyebrow="FAQ"
         title="Questions fréquentes"
-        description="Des réponses claires et prudentes — les détails manquants restent à compléter ensemble."
+        description="Des réponses claires pour préparer un premier échange — sans engagement."
       />
       <Section className="bg-cream-50">
         <Accordion

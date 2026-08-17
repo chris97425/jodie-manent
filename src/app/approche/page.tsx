@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import { FinalCta } from "@/components/home/final-cta";
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
+import { TestimonialsBlock } from "@/components/testimonials/testimonials-block";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/ui/page-hero";
 import { Section } from "@/components/ui/section";
@@ -9,17 +9,21 @@ import {
   APPROCHE_CLOSING,
   APPROCHE_ENTREPRISE,
   APPROCHE_INTRO,
+  APPROCHE_NOT_A_LABEL,
   APPROCHE_ORIGIN,
   APPROCHE_PILLARS,
   APPROCHE_QUALITIES,
   APPROCHE_ZONE_DE_GENIE,
 } from "@/lib/content/approche";
+import { APPROCHE_TESTIMONIALS } from "@/lib/content/testimonials";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "L'approche Intelligences et Natures Multiples",
   description:
-    "Une grille de lecture claire et positive : 10 Intelligences Multiples et 9 Natures Multiples pour mieux se connaître, révéler ses talents et mieux coopérer.",
-};
+    "10 Intelligences Multiples et 9 Natures Multiples : une grille de lecture claire et positive, issue des travaux de Howard Gardner et enrichie par Steven Rudolph, pour mieux se connaître et mieux coopérer.",
+  path: "/approche/",
+});
 
 export default function ApprochePage() {
   return (
@@ -40,7 +44,7 @@ export default function ApprochePage() {
           {APPROCHE_PILLARS.map((pillar, index) => (
             <RevealOnScroll key={pillar.id} delay={index * 0.06}>
               <article className="rounded-3xl border border-cream-200 bg-cream-50 p-8">
-                <p className="font-display text-5xl font-semibold text-coral-500">
+                <p className="font-display text-5xl font-semibold text-coral-600">
                   {pillar.count}
                 </p>
                 <h2 className="mt-3 font-display text-2xl font-semibold text-ink-700">
@@ -57,13 +61,15 @@ export default function ApprochePage() {
           <p className="mt-10 max-w-3xl text-lg leading-relaxed text-ink-700">
             {APPROCHE_ZONE_DE_GENIE}
           </p>
+          <aside className="mt-8 max-w-3xl rounded-3xl border border-coral-200 bg-coral-50 px-6 py-6 sm:px-8">
+            <p className="text-base leading-relaxed text-ink-700">
+              {APPROCHE_NOT_A_LABEL}
+            </p>
+          </aside>
         </RevealOnScroll>
       </Section>
 
-      <Section
-        className="bg-cream-50"
-        title="Pour qui, pour quoi ?"
-      >
+      <Section className="bg-cream-50" title="Bénéfices">
         <div className="grid gap-5 sm:grid-cols-2">
           {APPROCHE_AUDIENCES.map((audience, index) => (
             <RevealOnScroll key={audience.id} delay={index * 0.05}>
@@ -111,7 +117,7 @@ export default function ApprochePage() {
             </li>
           ))}
         </ul>
-        <aside className="mt-12 rounded-[2rem] bg-ink-800 px-8 py-10 text-center text-cream-50 sm:px-12">
+        <aside className="mt-12 rounded-[2rem] bg-night px-8 py-10 text-center text-cream sm:px-12">
           <p className="font-display text-2xl italic leading-snug sm:text-3xl">
             « {APPROCHE_CLOSING} »
           </p>
@@ -122,6 +128,13 @@ export default function ApprochePage() {
           </div>
         </aside>
       </Section>
+
+      <TestimonialsBlock
+        items={APPROCHE_TESTIMONIALS}
+        eyebrow="Témoignage"
+        title="Retour sur une découverte IM/NM"
+        className="bg-white"
+      />
 
       <FinalCta />
     </>
