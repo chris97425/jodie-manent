@@ -33,7 +33,7 @@ export function QuizStep({
               aria-checked={selected}
               onClick={() => onSelect(option.id)}
               className={cx(
-                "min-h-12 rounded-xl border px-4 py-3 text-left text-base font-medium transition-[border-color,background-color,transform,color] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:scale-[0.99]",
+                "min-h-12 w-full rounded-xl border px-4 py-3 text-left text-base font-medium transition-[border-color,background-color,transform,color] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 active:scale-[0.99]",
                 selected
                   ? "border-coral-500 bg-coral-50 text-coral-900"
                   : "border-cream-200 bg-white text-ink-700 hover:border-coral-300 hover:bg-cream-50",

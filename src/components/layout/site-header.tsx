@@ -18,22 +18,22 @@ export function SiteHeader() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-40 border-b border-ink-700/5 bg-cream-50/85 backdrop-blur-md">
-        <Container className="flex min-h-20 items-center justify-between gap-4 py-2">
+        <Container className="flex min-h-20 items-center justify-between gap-2 py-2 sm:gap-4">
           <Link
             href="/"
-            className="group flex min-h-11 items-center gap-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50"
+            className="group flex min-h-11 min-w-0 items-center gap-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50"
             aria-label={`${SITE_NAME} — Accueil`}
           >
             <BrandLogo
               size={88}
               priority
-              className="h-14 w-14 sm:h-[4.25rem] sm:w-[4.25rem]"
+              className="h-12 w-12 shrink-0 sm:h-[4.25rem] sm:w-[4.25rem]"
             />
             <span className="hidden flex-col leading-tight md:flex">
               <span className="text-sm font-semibold tracking-tight text-ink-700">
                 {SITE_NAME}
               </span>
-              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-coral-600">
+              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-coral-800">
                 Révélatrice de vos talents
               </span>
             </span>
@@ -54,10 +54,10 @@ export function SiteHeader() {
                     <Link
                       href={item.href}
                       className={cx(
-                        "inline-flex min-h-11 items-center rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:scale-[0.98]",
+                        "inline-flex min-h-11 items-center rounded-full px-2.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 active:scale-[0.98]",
                         active
-                          ? "text-coral-600"
-                          : "text-ink-600 hover:text-coral-600",
+                          ? "text-coral-800"
+                          : "text-ink-600 hover:text-coral-800",
                       )}
                       aria-current={active ? "page" : undefined}
                     >
@@ -69,13 +69,13 @@ export function SiteHeader() {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2">
             <Button href="/contact/" className="hidden sm:inline-flex">
               Échangeons
             </Button>
             <button
               type="button"
-              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-ink-700 transition-colors hover:bg-cream-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:scale-95 xl:hidden"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-ink-700 transition-colors hover:bg-cream-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 active:scale-95 xl:hidden"
               aria-label="Ouvrir le menu"
               aria-expanded={open}
               onClick={() => setOpen(true)}
