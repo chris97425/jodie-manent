@@ -15,7 +15,7 @@ export function SocialLinks() {
         href={LINKEDIN_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-5 flex min-h-11 items-center gap-3 rounded-lg px-3 text-ink-700 transition-colors hover:bg-cream-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+        className="mt-5 flex min-h-11 items-center gap-3 rounded-lg px-3 text-ink-700 transition-colors hover:bg-cream-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
       >
         <LinkedInIcon className="h-5 w-5 shrink-0 text-coral-600" />
         <span>Profil LinkedIn</span>

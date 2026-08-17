@@ -38,7 +38,7 @@ export function Accordion({ items, className }: AccordionProps) {
                 aria-expanded={open}
                 aria-controls={panelId}
                 onClick={() => setOpenId(open ? null : item.id)}
-                className="flex min-h-14 w-full items-center justify-between gap-4 rounded-2xl px-5 py-4 text-left text-base font-semibold text-ink-700 transition-colors hover:bg-cream-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:bg-cream-100"
+                className="flex min-h-14 w-full items-center justify-between gap-4 rounded-2xl px-5 py-4 text-left text-base font-semibold text-ink-700 transition-colors hover:bg-cream-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 active:bg-cream-100"
               >
                 <span>{item.title}</span>
                 <ChevronDown
