@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoJodie from "@/assets/logo_jodie.png";
+import logoJodie from "@/assets/logo-coral-transparent.png";
 
 type BrandLogoProps = {
   size?: number;
@@ -13,10 +13,10 @@ type BrandLogoProps = {
  * (évite l'icône cassée sur GitHub Pages).
  */
 export function BrandLogo({
-  size = 44,
+  size = 64,
   className,
   priority = false,
-  alt = "Logo Jodie M.",
+  alt = "Jodie Manent — Révélatrice de vos talents",
 }: BrandLogoProps) {
   return (
     <Image

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     default: `${SITE_NAME} — Coach professionnelle · La Réunion`,
     template: `%s · ${SITE_NAME}`,
   },
-  description: `${SITE_HEADLINE}. ${SITE_DESCRIPTION}`,
+  description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
   openGraph: {
     type: "website",
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     description: SITE_HEADLINE,
     images: [
       {
-        url: "/images/jodie-hero.jpg",
-        width: 1169,
-        height: 1280,
-        alt: "Jodie Manent, coach professionnelle certifiée",
+        url: "/images/jodie-photo-hero.jpg",
+        width: 1280,
+        height: 1920,
+        alt: "Jodie Manent, coach professionnelle, assise sur un banc corail entourée de végétation tropicale",
       },
     ],
   },
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_NAME} — Coach professionnelle`,
     description: SITE_HEADLINE,
-    images: ["/images/jodie-hero.jpg"],
+    images: ["/images/jodie-photo-hero.jpg"],
   },
   robots: {
     index: true,
