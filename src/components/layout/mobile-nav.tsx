@@ -29,7 +29,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 lg:hidden"
+      className="fixed inset-0 z-50 xl:hidden"
       role="dialog"
       aria-modal="true"
       aria-label="Menu de navigation"
@@ -48,7 +48,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
           <button
             type="button"
             onClick={onClose}
-            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-ink-700 transition-colors hover:bg-cream-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:scale-95"
+            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-ink-700 transition-colors hover:bg-cream-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600 active:scale-95"
             aria-label="Fermer le menu"
           >
             <X aria-hidden="true" className="h-5 w-5" />
@@ -69,7 +69,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
         </ul>
         <div className="border-t border-cream-200 p-4" onClick={onClose}>
           <Button href="/contact/" className="w-full">
-            Je prends RDV
+            Échangeons sur votre besoin
           </Button>
         </div>
       </nav>

@@ -21,7 +21,7 @@ export const SITE_LEGAL_INFO = {
   lastUpdated: "11 août 2026",
   cnilUrl: "https://www.cnil.fr",
   activity:
-    "Coach professionnelle certifiée (RNCP), spécialiste des Intelligences et Natures Multiples (INM)",
+    "Coach professionnelle certifiée (RNCP), formatrice et consultante, praticienne des Intelligences et Natures Multiples (IM/NM)",
 } as const;
 
 export const LEGAL_HOSTS = {
