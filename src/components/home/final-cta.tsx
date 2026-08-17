@@ -21,11 +21,11 @@ export function FinalCta() {
     <section className="px-4 py-16 sm:px-6 sm:py-20">
       <Container>
         <RevealOnScroll>
-          <div className="rounded-[2.5rem] bg-coral-500 px-8 py-12 text-center text-white md:px-16 md:py-16">
+          <div className="rounded-[2.5rem] bg-coral-500 px-8 py-12 text-center text-night md:px-16 md:py-16">
             <p className="font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
               Échangeons sur votre besoin
             </p>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-white/90">
+            <p className="mx-auto mt-4 max-w-xl text-lg text-night/80">
               Un premier échange permet de comprendre votre contexte et
               d&apos;imaginer l&apos;accompagnement le plus juste — sans
               engagement.
@@ -38,7 +38,7 @@ export function FinalCta() {
                 href="/faq/"
                 variant="ghost"
                 size="lg"
-                className="border border-white/40 text-white hover:bg-white/10 hover:text-white"
+                className="border border-night/20 text-night hover:bg-night/5 hover:text-night"
               >
                 Lire la FAQ
               </Button>
@@ -54,7 +54,7 @@ export function FinalCta() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={link.label}
-                      className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-white/90 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white active:bg-white/15"
+                      className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-night/80 transition-colors hover:bg-night/10 hover:text-night focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-night active:bg-night/15"
                     >
                       <Icon className="h-4 w-4" />
                     </a>

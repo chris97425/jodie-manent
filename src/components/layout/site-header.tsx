@@ -25,12 +25,17 @@ export function SiteHeader() {
             aria-label={`${SITE_NAME} — Accueil`}
           >
             <BrandLogo
-              size={80}
+              size={88}
               priority
-              className="h-14 w-14 sm:h-16 sm:w-16"
+              className="h-14 w-14 sm:h-[4.25rem] sm:w-[4.25rem]"
             />
-            <span className="hidden text-sm font-semibold tracking-tight text-ink-700 md:inline">
-              {SITE_NAME}
+            <span className="hidden flex-col leading-tight md:flex">
+              <span className="text-sm font-semibold tracking-tight text-ink-700">
+                {SITE_NAME}
+              </span>
+              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-coral-600">
+                Révélatrice de vos talents
+              </span>
             </span>
           </Link>
 

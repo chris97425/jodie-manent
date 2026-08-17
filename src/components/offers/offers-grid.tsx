@@ -35,11 +35,11 @@ export function OffersGrid() {
         </aside>
       </RevealOnScroll>
 
-      <div className="mt-12 rounded-3xl bg-coral-500 px-6 py-10 text-center text-white sm:px-10">
+      <div className="mt-12 rounded-3xl bg-coral-500 px-6 py-10 text-center text-night sm:px-10">
         <p className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
           Échangeons sur votre besoin
         </p>
-        <p className="mx-auto mt-3 max-w-xl text-base text-white/90">
+        <p className="mx-auto mt-3 max-w-xl text-base text-night/80">
           Décrivez votre contexte — je vous répondrai pour construire une
           proposition sur devis.
         </p>

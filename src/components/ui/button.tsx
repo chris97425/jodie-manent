@@ -29,13 +29,13 @@ const baseClasses =
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-coral-500 text-white shadow-sm hover:brightness-110 hover:shadow-md active:bg-coral-700",
+    "bg-coral-500 text-night shadow-sm hover:bg-coral-600 hover:shadow-md active:bg-coral-700",
   secondary:
-    "border border-ink-700/15 bg-transparent text-ink-700 hover:bg-white hover:border-coral-400 active:bg-cream-100",
+    "border border-ink-700/20 bg-transparent text-ink-700 hover:border-coral-500 hover:bg-white active:bg-cream-100",
   cream:
-    "bg-cream-100 text-ink-800 hover:bg-cream-50 active:bg-cream-200",
+    "bg-cream-50 text-ink-900 hover:bg-white active:bg-cream-100",
   ghost:
-    "bg-transparent text-ink-700 hover:bg-cream-100 hover:text-ink-800",
+    "bg-transparent text-ink-700 hover:bg-cream-100 hover:text-ink-900",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
