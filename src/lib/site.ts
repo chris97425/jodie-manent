@@ -9,10 +9,13 @@ export const SITE_LOCATION = "La Réunion";
 export const SITE_COVERAGE = "La Réunion, océan Indien et à distance";
 export const SITE_ROLE = "Coach • Formatrice • Consultante";
 
-/** URL publique GitHub Pages */
-export const SITE_URL = "https://chris97425.github.io/jodie-manent";
+/** Domaine cible (canonical / SEO). */
+export const SITE_URL = "https://jodiemanent.fr";
 
 export const PLACEHOLDER = "[À COMPLÉTER]";
+
+export const LINKEDIN_URL =
+  "https://www.linkedin.com/in/jodie-manent-8b727717/";
 
 export type NavItem = {
   href: string;
@@ -53,32 +56,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    href: "https://re.linkedin.com/in/jodie-manent-8b727717",
-    external: true,
-  },
-  {
-    id: "facebook",
-    label: "Facebook — Révélatrice de vos talents",
-    href: "https://www.facebook.com/jodiemanent",
-    external: true,
-  },
-  {
-    id: "instagram",
-    label: "Instagram",
-    href: "https://www.instagram.com/jodiemanent/",
-    external: true,
-  },
-  {
-    id: "malt",
-    label: "Malt — Coach RNCP · Bilans de compétences",
-    href: "https://www.malt.fr/profile/jodiemanent",
+    href: LINKEDIN_URL,
     external: true,
   },
 ];
-
-export const CONTACT = {
-  email: PLACEHOLDER,
-  phone: PLACEHOLDER,
-  address: PLACEHOLDER,
-  location: SITE_LOCATION,
-};

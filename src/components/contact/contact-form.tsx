@@ -32,8 +32,7 @@ export function ContactForm() {
         id="contact-reassurance"
         className="mb-6 rounded-xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm text-ink-600"
       >
-        {CONTACT_REASSURANCE} Formulaire en mode <strong>démo</strong> — aucun
-        envoi serveur pour cette vitrine.
+        {CONTACT_REASSURANCE}
       </p>
 
       <div className="grid gap-5 sm:grid-cols-2">

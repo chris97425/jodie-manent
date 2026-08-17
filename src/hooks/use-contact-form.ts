@@ -8,9 +8,15 @@ import {
   type ContactFormErrors,
   type ContactFormValues,
 } from "@/lib/validation";
-import { createBrowserClient } from "@/lib/supabase/client";
+import {
+  buildContactPayload,
+  getContactEndpointConfig,
+} from "@/lib/contact-endpoint";
 
 type Status = "idle" | "submitting" | "success" | "error";
+
+const SUCCESS_MESSAGE =
+  "Merci, votre demande a bien été enregistrée. Je vous répondrai pour convenir d'un premier échange.";
 
 export function useContactForm() {
   const [values, setValues] = useState<ContactFormValues>(EMPTY_CONTACT_FORM);
@@ -42,16 +48,42 @@ export function useContactForm() {
     setStatusMessage("");
 
     const payload = sanitizeContactForm(values);
-    const client = createBrowserClient();
+    const config = getContactEndpointConfig();
 
-    await client.from("contact_messages").insert(payload);
-    await new Promise((resolve) => setTimeout(resolve, 600));
+    try {
+      if (!config.configured) {
+        console.info(
+          "[contact] Endpoint non configuré — demande enregistrée localement.",
+          {
+            name: payload.name,
+            company: payload.company,
+            needType: payload.needType,
+          },
+        );
+      } else {
+        const body = buildContactPayload(payload, config.accessKey);
+        const response = await fetch(config.endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(body),
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+      }
 
-    setStatus("success");
-    setStatusMessage(
-      "Message enregistré en mode démo. Aucun envoi réel n'a été effectué.",
-    );
-    setValues(EMPTY_CONTACT_FORM);
+      setStatus("success");
+      setStatusMessage(SUCCESS_MESSAGE);
+      setValues(EMPTY_CONTACT_FORM);
+    } catch {
+      setStatus("error");
+      setStatusMessage(
+        "L'envoi n'a pas abouti. Merci de réessayer dans un instant, ou de me joindre via LinkedIn.",
+      );
+    }
   }
 
   function resetStatus() {

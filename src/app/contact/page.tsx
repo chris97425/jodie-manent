@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact/contact-form";
 import { ContactInfo } from "@/components/contact/contact-info";
 import { SocialLinks } from "@/components/contact/social-links";
 import { PageHero } from "@/components/ui/page-hero";
 import { Container } from "@/components/ui/container";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Contact",
   description:
-    "Échangeons sur votre besoin. Un premier échange permet de comprendre votre contexte et d'imaginer l'accompagnement le plus juste.",
-};
+    "Échangeons sur votre besoin. Un premier échange permet de comprendre votre contexte et d'imaginer l'accompagnement le plus juste — coaching, bilan de compétences ou formation à La Réunion.",
+  path: "/contact/",
+});
 
 export default function ContactPage() {
   return (

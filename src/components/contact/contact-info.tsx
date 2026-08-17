@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { MapPin, Mail, Phone } from "lucide-react";
-import { withBasePath } from "@/lib/assets";
-import { IMAGES } from "@/lib/assets";
-import { CONTACT, PLACEHOLDER, SITE_COVERAGE } from "@/lib/site";
+import { MapPin } from "lucide-react";
+import { BrandLogo } from "@/components/ui/brand-logo";
+import { LinkedInIcon } from "@/components/ui/social-icons";
+import { IMAGES, withBasePath } from "@/lib/assets";
+import { LINKEDIN_URL, SITE_COVERAGE, SITE_LOCATION } from "@/lib/site";
 
 export function ContactInfo() {
   return (
@@ -25,12 +26,15 @@ export function ContactInfo() {
         </div>
       </div>
 
+      <BrandLogo size={72} className="mb-5 h-16 w-16" />
+
       <h2 className="font-display text-2xl font-semibold tracking-tight text-ink-700">
-        Coordonnées
+        Me joindre
       </h2>
       <p className="mt-3 text-base leading-relaxed text-ink-500">
-        Les coordonnées définitives seront renseignées ultérieurement. En
-        attendant, utilisez le formulaire (mode démo) ou LinkedIn.
+        Un premier échange permet de comprendre votre contexte et d&apos;imaginer
+        l&apos;accompagnement le plus juste. Le formulaire est le canal d&apos;écriture
+        — LinkedIn pour un message professionnel.
       </p>
 
       <ul className="mt-6 space-y-4">
@@ -41,34 +45,25 @@ export function ContactInfo() {
           />
           <div>
             <p className="font-medium text-ink-700">Localisation</p>
-            <p>{CONTACT.location}</p>
-            <p className="text-sm text-ink-500">
-              Interventions : {SITE_COVERAGE}
-            </p>
-            <p className="mt-1 text-sm text-ink-500">
-              Adresse postale : {PLACEHOLDER}
-            </p>
+            <p>{SITE_LOCATION}</p>
+            <p className="text-sm text-ink-500">{SITE_COVERAGE}</p>
           </div>
         </li>
-        <li className="flex gap-3 text-ink-600">
-          <Mail
-            aria-hidden="true"
-            className="mt-1 h-5 w-5 shrink-0 text-coral-600"
-          />
-          <div>
-            <p className="font-medium text-ink-700">Email</p>
-            <p>{CONTACT.email}</p>
-          </div>
-        </li>
-        <li className="flex gap-3 text-ink-600">
-          <Phone
-            aria-hidden="true"
-            className="mt-1 h-5 w-5 shrink-0 text-coral-600"
-          />
-          <div>
-            <p className="font-medium text-ink-700">Téléphone</p>
-            <p>{CONTACT.phone}</p>
-          </div>
+        <li>
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex gap-3 rounded-xl text-ink-700 transition-colors hover:text-coral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-600"
+          >
+            <LinkedInIcon className="mt-1 h-5 w-5 shrink-0 text-coral-600" />
+            <div>
+              <p className="font-medium">LinkedIn</p>
+              <p className="text-sm text-ink-500 underline-offset-2 hover:underline">
+                linkedin.com/in/jodie-manent-8b727717
+              </p>
+            </div>
+          </a>
         </li>
       </ul>
     </aside>
