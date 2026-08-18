@@ -4,6 +4,7 @@ import { FaqSection } from "@/components/home/faq-section";
 import { FeaturedOfferBand } from "@/components/home/featured-offer-band";
 import { FinalCta } from "@/components/home/final-cta";
 import { HeroSection } from "@/components/home/hero-section";
+import { KeywordMarquee } from "@/components/home/keyword-marquee";
 import { OffersPreview } from "@/components/home/offers-preview";
 import { QuizSection } from "@/components/home/quiz-section";
 import { SocialProof } from "@/components/home/social-proof";
@@ -14,6 +15,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <TrustBand />
+      <KeywordMarquee />
       <AudienceProfiles />
       <OffersPreview />
       <SocialProof />
