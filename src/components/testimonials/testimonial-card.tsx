@@ -16,7 +16,7 @@ export function TestimonialCard({
       className={cx(
         "flex h-full flex-col rounded-3xl px-6 py-8 sm:px-8",
         featured
-          ? "bg-ink-900 text-cream-50"
+          ? "bg-night text-cream-50"
           : "border border-cream-200 bg-white",
       )}
     >

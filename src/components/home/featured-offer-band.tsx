@@ -9,7 +9,7 @@ export function FeaturedOfferBand() {
     <section className="px-4 py-16 sm:px-6 sm:py-20">
       <Container>
         <RevealOnScroll>
-          <div className="rounded-[2.5rem] bg-ink-800 px-6 py-12 text-cream-50 sm:px-8 md:px-16 md:py-20">
+          <div className="rounded-[2.5rem] bg-night px-6 py-12 text-cream-50 sm:px-8 md:px-16 md:py-20">
             <p className="text-xs font-bold uppercase tracking-widest text-coral-400">
               {FEATURED_OFFER.eyebrow}
             </p>
@@ -30,9 +30,9 @@ export function FeaturedOfferBand() {
               </Button>
               <Button
                 href={FEATURED_OFFER.href}
-                variant="ghost"
+                variant="cream"
                 size="lg"
-                className="border border-cream-100/40 text-cream-50 hover:bg-white/10 hover:text-white focus-visible:ring-offset-ink-800"
+                className="focus-visible:ring-offset-night"
               >
                 En savoir plus
               </Button>

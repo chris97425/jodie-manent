@@ -43,7 +43,7 @@ export function KeywordMarquee() {
             Formations · Coaching
           </p>
         ) : (
-          <div data-track className="flex w-max">
+          <div data-track className="flex w-max will-change-transform">
             {content}
           </div>
         )}

@@ -18,7 +18,7 @@ export function RevealOnScroll({
   children,
   className,
   delay = 0,
-  y = 32,
+  y = 16,
 }: RevealOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -32,9 +32,9 @@ export function RevealOnScroll({
       {
         autoAlpha: 1,
         y: 0,
-        duration: 0.9,
         delay,
         ease: "power3.out",
+        duration: 0.4,
         scrollTrigger: {
           trigger: el,
           start: "top 88%",

@@ -19,7 +19,7 @@ export function Card({
       className={cx(
         "rounded-2xl border border-cream-200 bg-white p-6 shadow-sm sm:p-7",
         interactive &&
-          "transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-coral-300 hover:shadow-md focus-within:border-coral-400",
+          "transition-[border-color,box-shadow,transform] duration-300 ease-out hover:-translate-y-1 hover:border-coral-300 hover:shadow-md focus-within:border-coral-400",
         className,
       )}
     >

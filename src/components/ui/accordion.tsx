@@ -38,13 +38,13 @@ export function Accordion({ items, className }: AccordionProps) {
                 aria-expanded={open}
                 aria-controls={panelId}
                 onClick={() => setOpenId(open ? null : item.id)}
-                className="flex min-h-14 w-full items-center justify-between gap-4 rounded-2xl px-5 py-4 text-left text-base font-semibold text-ink-700 transition-colors hover:bg-cream-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 active:bg-cream-100"
+                className="flex min-h-14 w-full items-center justify-between gap-4 rounded-2xl px-5 py-4 text-left text-base font-semibold text-night transition-colors duration-300 ease-out hover:bg-cream-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 active:bg-cream-100"
               >
                 <span>{item.title}</span>
                 <ChevronDown
                   aria-hidden="true"
                   className={cx(
-                    "h-5 w-5 shrink-0 text-coral-800 transition-transform duration-200",
+                    "h-5 w-5 shrink-0 text-coral-800 transition-transform duration-300 ease-out",
                     open && "rotate-180",
                   )}
                 />
@@ -54,14 +54,19 @@ export function Accordion({ items, className }: AccordionProps) {
               id={panelId}
               role="region"
               aria-labelledby={buttonId}
-              hidden={!open}
-              className="px-5 pb-5"
+              aria-hidden={!open}
+              className={cx(
+                "grid transition-[grid-template-rows,opacity] duration-300 ease-out motion-reduce:transition-none",
+                open
+                  ? "grid-rows-[1fr] opacity-100"
+                  : "grid-rows-[0fr] opacity-0",
+              )}
             >
-              {open ? (
-                <p className="text-base leading-relaxed text-ink-500">
+              <div className="min-h-0 overflow-hidden">
+                <p className="px-5 pb-5 text-base leading-relaxed text-ink-500">
                   {item.content}
                 </p>
-              ) : null}
+              </div>
             </div>
           </div>
         );

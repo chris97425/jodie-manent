@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, Parisienne } from "next/font/google";
+import { Cormorant_Garamond, Fraunces, Inter, Parisienne } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
@@ -10,6 +10,14 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -49,7 +57,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${fraunces.variable} ${inter.variable} ${parisienne.variable}`}
+      className={`${fraunces.variable} ${cormorant.variable} ${inter.variable} ${parisienne.variable}`}
     >
       <body className="flex min-h-dvh flex-col font-sans antialiased">
         <script

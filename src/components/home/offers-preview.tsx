@@ -31,7 +31,7 @@ export function OffersPreview() {
                   <li>
                     <Link
                       href={item.href}
-                      className="group flex min-h-11 items-start gap-3 border-b border-ink-700/10 py-7 sm:gap-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
+                      className="group flex min-h-11 items-start gap-3 border-b border-ink-700/10 py-7 transition-[padding] duration-300 ease-out sm:gap-6 hover:pl-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800"
                     >
                       <Icon
                         aria-hidden="true"

@@ -10,7 +10,7 @@ export function OfferCard({ offer }: OfferCardProps) {
   return (
     <article
       id={offer.id}
-      className="flex h-full scroll-mt-28 flex-col rounded-3xl border border-cream-200 bg-white p-6 shadow-sm transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-0.5 hover:border-coral-300 hover:shadow-md focus-within:border-coral-400 sm:p-8"
+      className="flex h-full scroll-mt-28 flex-col rounded-3xl border border-cream-200 bg-white p-6 shadow-sm transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-coral-300 hover:shadow-md focus-within:border-coral-400 sm:p-8"
     >
       <h3 className="font-display text-2xl font-semibold tracking-tight text-ink-700">
         {offer.title}
