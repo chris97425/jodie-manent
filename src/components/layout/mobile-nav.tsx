@@ -39,7 +39,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
     >
       <button
         type="button"
-        className="absolute inset-0 bg-ink-800/45 transition-opacity"
+        className="absolute inset-0 bg-night/45 transition-opacity"
         aria-label="Fermer le menu"
         onClick={onClose}
       />
