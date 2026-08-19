@@ -132,8 +132,8 @@ export function HeroSection() {
             className="aspect-[4/5]"
             imageClassName="object-[center_20%]"
           />
-          <div className="absolute bottom-8 left-4 right-4 hidden max-w-xs rounded-2xl bg-white p-5 shadow-lg md:block md:right-auto lg:bottom-4 lg:left-4">
-            <p className="font-display text-lg italic leading-snug text-night">
+          <div className="absolute bottom-8 left-4 right-4 hidden max-w-sm rounded-2xl bg-white p-5 shadow-lg md:block md:right-auto lg:bottom-4 lg:left-4">
+            <p className="font-display text-base italic leading-snug text-night">
               « {HOME_QUOTE} »
             </p>
           </div>
