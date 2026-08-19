@@ -71,7 +71,7 @@ export const HOME_PEDAGOGY =
   "Une pédagogie active, humaine et concrète : coaching, expérimentation, intelligence collective, mises en situation, retours d'expérience et plans d'action.";
 
 export const HOME_QUOTE =
-  "Je suis convaincue que nous avons tous des talents, des intelligences et un potentiel qui ne demandent qu'à être révélés. Mieux se connaître, c'est apprendre à faire des choix plus justes pour soi, à trouver sa place et à mieux travailler avec les autres.";
+  "Je suis convaincue du potentiel de chacun. Apprendre à mieux se connaître, c'est apprendre à faire des choix plus justes pour soi, à trouver sa place et à mieux travailler avec les autres.";
 
 export const HOME_CONVICTION =
   "Je crois que les personnes progressent davantage lorsqu'elles comprennent leurs ressources, se sentent légitimes et trouvent un environnement qui leur permet d'exprimer leur potentiel.";
