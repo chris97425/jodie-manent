@@ -10,7 +10,12 @@ import { PortraitCard } from "@/components/ui/portrait-card";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import { IMAGES } from "@/lib/assets";
 import { HOME_QUOTE } from "@/lib/content/home";
-import { SITE_DESCRIPTION, SITE_HERO, SITE_ROLE } from "@/lib/site";
+import {
+  SITE_DESCRIPTION,
+  SITE_HERO_LINE_1,
+  SITE_HERO_LINE_2,
+  SITE_ROLE,
+} from "@/lib/site";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,7 +89,7 @@ export function HeroSection() {
         <div>
           <p
             data-hero="eyebrow"
-            className="text-xs font-bold uppercase tracking-[0.2em] text-coral-800"
+            className="text-xs font-bold uppercase tracking-[0.2em] text-coral-500"
           >
             {SITE_ROLE}
           </p>
@@ -95,12 +100,14 @@ export function HeroSection() {
             Révéler les{" "}
             <em className="italic font-normal text-coral">talents</em>.
             <span className="mt-3 block font-normal text-night">
-              {SITE_HERO}
+              {SITE_HERO_LINE_1}
+              <br />
+              {SITE_HERO_LINE_2}
             </span>
           </h1>
           <p
             data-hero="support"
-            className="mt-8 max-w-xl text-lg leading-relaxed text-ink-500 sm:text-xl"
+            className="mt-8 max-w-xl text-base leading-relaxed text-ink-500 sm:text-lg"
           >
             {SITE_DESCRIPTION}
           </p>
@@ -110,7 +117,7 @@ export function HeroSection() {
               <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
             </Button>
             <Button href="/approche/" variant="secondary" size="lg">
-              Découvrir l&apos;approche IM/NM
+              Découvrir les Intelligences et Natures Multiples
             </Button>
           </div>
         </div>

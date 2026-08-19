@@ -25,18 +25,11 @@ export function SiteHeader() {
             aria-label={`${SITE_NAME} — Accueil`}
           >
             <BrandLogo
+              variant="onCoral"
               size={88}
               priority
               className="h-12 w-12 shrink-0 sm:h-[4.25rem] sm:w-[4.25rem]"
             />
-            <span className="hidden flex-col leading-tight md:flex">
-              <span className="text-sm font-semibold tracking-tight text-ink-700">
-                {SITE_NAME}
-              </span>
-              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-coral-800">
-                Révélatrice de vos talents
-              </span>
-            </span>
           </Link>
 
           <nav aria-label="Navigation principale" className="hidden xl:block">
@@ -54,10 +47,10 @@ export function SiteHeader() {
                     <Link
                       href={item.href}
                       className={cx(
-                        "inline-flex min-h-11 items-center rounded-full px-2.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-800 active:scale-[0.98]",
+                        "inline-flex min-h-11 items-center rounded-full px-2.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-500 active:scale-[0.98]",
                         active
-                          ? "text-coral-800"
-                          : "text-ink-600 hover:text-coral-800",
+                          ? "text-coral-500"
+                          : "text-ink-600 hover:text-coral-500",
                       )}
                       aria-current={active ? "page" : undefined}
                     >
@@ -71,7 +64,7 @@ export function SiteHeader() {
 
           <div className="flex shrink-0 items-center gap-2">
             <Button href="/contact/" className="hidden sm:inline-flex">
-              Échangeons
+              Prendre RDV
             </Button>
             <button
               type="button"
