@@ -73,7 +73,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
         </ul>
         <div className="border-t border-cream-200 p-4" onClick={onClose}>
           <Button href="/contact/" className="w-full">
-            Prendre RDV
+            Prendre un RDV gratuit &amp; sans engagement
           </Button>
         </div>
       </nav>

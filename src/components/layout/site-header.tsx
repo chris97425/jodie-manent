@@ -64,7 +64,7 @@ export function SiteHeader() {
 
           <div className="flex shrink-0 items-center gap-2">
             <Button href="/contact/" className="hidden sm:inline-flex">
-              Prendre RDV
+              Prendre un RDV gratuit &amp; sans engagement
             </Button>
             <button
               type="button"

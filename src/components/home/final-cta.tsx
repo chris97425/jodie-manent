@@ -23,7 +23,7 @@ export function FinalCta() {
                 size="lg"
                 className="hover:-translate-y-0.5 hover:shadow-lg hover:shadow-coral-900/20"
               >
-                Prendre RDV
+                Prendre un RDV gratuit &amp; sans engagement
               </Button>
             </div>
           </div>
