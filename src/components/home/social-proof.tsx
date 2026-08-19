@@ -6,7 +6,7 @@ import { HOME_TESTIMONIALS } from "@/lib/content/testimonials";
 export function SocialProof() {
   return (
     <Section
-      className="border-y border-ink-700/5 bg-white"
+      className="border-y border-ink-700/5 bg-cream-50"
       eyebrow="Témoignages"
       title="Ce que disent les personnes accompagnées."
     >
