@@ -9,7 +9,7 @@ Canonical / domaine cible : [https://jodiemanent.fr](https://jodiemanent.fr)
 - **Corail** `#ff6861` — CTA, accents, liens
 - **Blanc cassé** `#fff9ef` — fond principal
 - **Bleu nuit** `#02142f` — textes et accents sombres
-- Typo : **Fraunces** (titres) · **Inter** (corps)
+- Typo : **Instrument Serif** (titres) · **Open Sans** (corps) · **Parisienne** (script logo)
 - Photo hero : `public/images/jodie-photo-hero.jpg` (banc orange, végétation tropicale)
 - Logos : `public/logos/` et `src/assets/logos/` (saumon sur fond transparent, blanc sur saumon)
 

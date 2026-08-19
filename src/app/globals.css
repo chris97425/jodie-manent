@@ -98,9 +98,8 @@
   --color-ink-800: var(--ink-800);
   --color-ink-900: var(--ink-900);
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
-  --font-serif: var(--font-cormorant), "Palatino Linotype", Palatino, serif;
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
   --font-script: var(--font-parisienne), cursive;
 
   --radius-sm: var(--radius-sm);
@@ -152,7 +151,7 @@
   h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--ink-700);
   }
 
