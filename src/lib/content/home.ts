@@ -68,7 +68,7 @@ export const HOME_ACCOMPANIMENTS: HomeAccompaniment[] = [
 ];
 
 export const HOME_PEDAGOGY =
-  "Une pédagogie active, humaine et concrète : coaching, expérimentation, intelligence collective, mises en situation, retours d'expérience et plans d'action.";
+  "Se connaître, évoluer, coopérer : des accompagnements conçus pour faire grandir les personnes et les collectifs.";
 
 export const HOME_QUOTE =
   "Je suis convaincue du potentiel de chacun. Apprendre à mieux se connaître, c'est apprendre à faire des choix plus justes pour soi, à trouver sa place et à mieux travailler avec les autres.";
