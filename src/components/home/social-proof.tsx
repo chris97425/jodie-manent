@@ -9,6 +9,7 @@ export function SocialProof() {
       className="border-y border-ink-700/5 bg-cream-50"
       eyebrow="Témoignages"
       title="Ce que disent les personnes accompagnées."
+      description="Découvrez les retours de celles et ceux que j'ai eu le plaisir d'accompagner."
     >
       <RevealOnScroll>
         <TestimonialStack items={HOME_TESTIMONIALS} />
