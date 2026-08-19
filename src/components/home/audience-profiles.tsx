@@ -10,7 +10,7 @@ export function AudienceProfiles() {
   return (
     <Section
       className="border-y border-ink-700/5 bg-white/60"
-      title="Trois portes d'entrée, une même attention."
+      title="À chaque besoin, un accompagnement"
       description="Chaque parcours commence là où vous êtes — avec vos questions, votre contexte, vos enjeux."
     >
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
