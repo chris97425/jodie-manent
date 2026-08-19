@@ -90,11 +90,11 @@ export function HeroSection() {
           </p>
           <h1
             data-hero="headline"
-            className="mt-6 max-w-xl break-words font-serif text-5xl font-medium leading-[1.12] tracking-tight text-night lg:text-6xl"
+            className="mt-6 max-w-xl break-words font-display text-5xl font-normal leading-[1.12] tracking-tight text-night lg:text-6xl"
           >
             Révéler les{" "}
-            <em className="italic font-medium text-coral">talents</em>.
-            <span className="mt-3 block font-medium text-night">
+            <em className="italic font-normal text-coral">talents</em>.
+            <span className="mt-3 block font-normal text-night">
               {SITE_HERO}
             </span>
           </h1>
@@ -126,7 +126,7 @@ export function HeroSection() {
             imageClassName="object-[center_20%]"
           />
           <div className="absolute bottom-8 left-4 right-4 hidden max-w-xs rounded-2xl bg-white p-5 shadow-lg md:block md:right-auto lg:bottom-4 lg:left-4">
-            <p className="font-serif text-lg italic leading-snug text-night">
+            <p className="font-display text-lg italic leading-snug text-night">
               « {HOME_QUOTE} »
             </p>
           </div>

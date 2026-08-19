@@ -1,29 +1,23 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Fraunces, Inter, Parisienne } from "next/font/google";
+import { Instrument_Serif, Open_Sans, Parisienne } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { rootMetadata } from "@/lib/root-metadata";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: "400",
   style: ["normal", "italic"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
   display: "swap",
 });
 
@@ -57,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${fraunces.variable} ${cormorant.variable} ${inter.variable} ${parisienne.variable}`}
+      className={`${openSans.variable} ${instrumentSerif.variable} ${parisienne.variable}`}
     >
       <body className="flex min-h-dvh flex-col font-sans antialiased">
         <script
