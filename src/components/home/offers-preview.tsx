@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GraduationCap, Mic, Briefcase } from "lucide-react";
+import { GraduationCap, Mic, Briefcase, Users } from "lucide-react";
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
 import { Container } from "@/components/ui/container";
 import {
@@ -7,7 +7,7 @@ import {
   HOME_PEDAGOGY,
 } from "@/lib/content/home";
 
-const ICONS = [GraduationCap, Briefcase, Mic] as const;
+const ICONS = [GraduationCap, Users, Briefcase, Mic] as const;
 
 export function OffersPreview() {
   return (
@@ -15,7 +15,7 @@ export function OffersPreview() {
       <Container>
         <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-16">
           <RevealOnScroll>
-            <h2 className="font-display text-3xl font-semibold tracking-tight text-ink-700 sm:text-4xl lg:text-5xl">
+            <h2 className="font-display text-3xl font-normal tracking-tight text-ink-700 sm:text-4xl lg:text-5xl">
               Mes accompagnements
             </h2>
             <p className="mt-5 max-w-sm text-base leading-relaxed text-ink-500">
@@ -38,7 +38,7 @@ export function OffersPreview() {
                         className="mt-1 h-5 w-5 shrink-0 text-coral-500"
                       />
                       <div className="min-w-0 flex-1">
-                        <h3 className="text-lg font-semibold text-ink-700">
+                        <h3 className="font-display text-xl font-normal text-ink-700">
                           {item.title}
                         </h3>
                         <p className="mt-1 text-sm text-ink-500">

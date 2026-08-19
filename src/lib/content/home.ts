@@ -45,6 +45,13 @@ export const HOME_ACCOMPANIMENTS: HomeAccompaniment[] = [
     href: "/entreprises-equipes/",
   },
   {
+    id: "cohesion",
+    title: "Journées de cohésion & intelligence collective",
+    description:
+      "Des temps forts fédérateurs pour mieux coopérer.",
+    href: "/entreprises-equipes/#cohesion",
+  },
+  {
     id: "bilan-coaching",
     title: "Bilans de compétences et coaching professionnel",
     description:
