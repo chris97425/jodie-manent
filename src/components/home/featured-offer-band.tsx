@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import { RevealOnScroll } from "@/components/motion/reveal-on-scroll";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -13,8 +12,10 @@ export function FeaturedOfferBand() {
             <p className="text-xs font-bold uppercase tracking-widest text-coral-400">
               {FEATURED_OFFER.eyebrow}
             </p>
-            <h2 className="mt-6 max-w-3xl font-display text-3xl font-semibold leading-[1.08] tracking-tight sm:text-4xl lg:text-5xl">
-              Développer sa posture managériale grâce aux{" "}
+            <h2 className="mt-6 max-w-3xl font-display text-3xl font-normal leading-[1.08] tracking-tight text-cream-50 sm:text-4xl lg:text-5xl">
+              Développer sa posture managériale
+              <br />
+              grâce aux{" "}
               <span className="italic text-coral-400">
                 Intelligences et Natures Multiples
               </span>
@@ -24,10 +25,6 @@ export function FeaturedOfferBand() {
               {FEATURED_OFFER.description}
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <Button href="/contact/" size="lg">
-                Construire une intervention sur mesure
-                <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-              </Button>
               <Button
                 href={FEATURED_OFFER.href}
                 variant="cream"

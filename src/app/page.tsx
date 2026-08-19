@@ -1,5 +1,4 @@
 import { AudienceProfiles } from "@/components/home/audience-profiles";
-import { ConvictionBand } from "@/components/home/conviction-band";
 import { FaqSection } from "@/components/home/faq-section";
 import { FeaturedOfferBand } from "@/components/home/featured-offer-band";
 import { FinalCta } from "@/components/home/final-cta";
@@ -17,7 +16,6 @@ export default function HomePage() {
       <OffersPreview />
       <SocialProof />
       <FeaturedOfferBand />
-      <ConvictionBand />
       <FaqSection />
       <FinalCta />
     </>
