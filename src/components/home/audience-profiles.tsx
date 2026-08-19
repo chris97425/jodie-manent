@@ -25,7 +25,7 @@ export function AudienceProfiles() {
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50 text-coral-600 transition-colors group-hover:bg-coral-50">
                   <Icon aria-hidden="true" className="h-5 w-5" />
                 </div>
-                <h3 className="font-display text-xl font-semibold tracking-tight text-ink-700">
+                <h3 className="font-display text-xl font-normal tracking-tight text-ink-700">
                   {door.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-500">
