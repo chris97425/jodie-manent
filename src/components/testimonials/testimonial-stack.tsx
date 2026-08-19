@@ -32,7 +32,7 @@ export function TestimonialStack({
 
   return (
     <div>
-      <div className="flex flex-col gap-5">
+      <div className="grid gap-5 md:grid-cols-3 md:gap-6">
         {visible.map((item) => {
           const isExpanded = Boolean(expanded[item.id]);
           const canExpand = item.quote.length > 160;
